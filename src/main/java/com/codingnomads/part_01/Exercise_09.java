@@ -9,4 +9,14 @@ package com.codingnomads.part_01;
 
 public class Exercise_09 {
 
+    public static void main(String[] args) {
+
+        double areaOfRectangle = 2.4 * 6.4;
+        double perimeterOfRectangle = 2 * (2.4 * 6.4);
+
+        System.out.println("The area of the rectangle is: " + areaOfRectangle);
+        System.out.println("The perimeter of the rectangle is:: " + perimeterOfRectangle);
+
+    }
+
 }
