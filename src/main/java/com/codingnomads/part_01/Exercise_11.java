@@ -13,5 +13,14 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
+        float birthPerMinute = 6/60f;
+        float deathPerMinute = 12/60f;
+        float immigrantsPerMinute = 40/60f;
+        double currentPop = 380123456;
+        double popGrowthPerYear = 365 * 12 * 60 * (1+ birthPerMinute) * (1 - deathPerMinute) * (1+immigrantsPerMinute);
+        System.out.println("The population will be " + (int)(3 * popGrowthPerYear + currentPop) + " in three years.");
+
+    }
 
 }

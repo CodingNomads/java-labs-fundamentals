@@ -9,5 +9,9 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_07 {
-
+    public static void main(String[] args) {
+        for(int i = 0; i < 12; i = i + 3){
+//
+        }
+    }
 }
