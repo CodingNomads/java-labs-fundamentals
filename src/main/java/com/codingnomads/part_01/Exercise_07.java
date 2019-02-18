@@ -10,8 +10,22 @@ package com.codingnomads.part_01;
 
 public class Exercise_07 {
     public static void main(String[] args) {
-        for(int i = 0; i < 12; i = i + 3){
-//
+        float sum = 0;
+        boolean sign = true;
+        for(int i = 1; i < 12; i = i + 2){
+            float number = 1f/i;
+
+            if(!sign){
+                number = number * -1;
+                sign = true;
+            } else {
+                number = number * 1;
+                sign = false;
+            }
+            sum +=number;
         }
+        float pi = sum*4;
+        System.out.println("Pi is estimated to " + pi +".");
+
     }
 }
