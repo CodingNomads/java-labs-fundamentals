@@ -9,5 +9,9 @@ package com.codingnomads.part_01;
  * Yeehaw!
  */
 public class Exercise_01 {
+    public static void main(String[] args) {
+        System.out.println("<p>\nHello World!!\nI`m a programmer now.\nYeeehaw!");
+    }
+
 
 }
