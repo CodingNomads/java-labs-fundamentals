@@ -1,5 +1,7 @@
 package com.codingnomads.part_02;
 
+import java.util.Scanner;
+
 /**
  * Part 2 Exercise 4:
  * <p>
@@ -9,6 +11,14 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
 
+        System.out.println("Enter Pounds");
+        double pound = kb.nextDouble();
 
+        double kilograms = pound * 0.454;
+
+        System.out.println(pound + " pound is " + kilograms + " kilograms");
+    }
 }

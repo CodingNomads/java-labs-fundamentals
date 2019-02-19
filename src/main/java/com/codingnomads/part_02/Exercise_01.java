@@ -1,4 +1,5 @@
 package com.codingnomads.part_02;
+import java.util.Scanner;
 
 /**
  * Part 2 Exercise 1:
@@ -13,6 +14,14 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_01 {
+    public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
 
+        System.out.println("Enter Degree");
+        double degree = kb.nextDouble();
 
+        double fahrenheit = 9 * (degree / 5) + 32;
+
+        System.out.println(degree + " degrees celsius = " + fahrenheit + " degrees fahrenheit");
+    }
 }

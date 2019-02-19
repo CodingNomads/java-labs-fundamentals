@@ -1,5 +1,7 @@
 package com.codingnomads.part_02;
 
+import java.util.Scanner;
+
 /**
  * Part 2 Exercise 3:
  * <p>
@@ -10,5 +12,16 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_03 {
+    public static void main(String[] args) {
+
+        Scanner kb = new Scanner(System.in);
+
+        System.out.println("Enter Feet Length");
+        double feet = kb.nextDouble();
+
+        double meter = feet * 0.305;
+
+        System.out.println(feet + " feet= " + meter + " meters. ");
+    }
 
 }
