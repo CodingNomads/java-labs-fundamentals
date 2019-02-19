@@ -1,5 +1,7 @@
 package com.codingnomads.part_02;
 
+import java.util.Scanner;
+
 /**
  * Part 2 Exercise 1:
  * Celsius to Fahrenheit
@@ -13,6 +15,21 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_01 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please put in the degrees you wish to be converted to Fahrenheit: ");
+
+        double celsius = scanner.nextDouble();
+
+        double fahrenheit = 9 * (celsius/5) + 32;
+
+        System.out.println(celsius + " degrees celsius are " + fahrenheit + " degrees fahrenheit.");
+
+
+
+    }
 
 
 }

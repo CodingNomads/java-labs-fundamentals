@@ -8,7 +8,15 @@ package com.codingnomads.part_02;
  * Tip: Use a variable of char type.
  */
 public class Exercise_09 {
+    public static void main(String[] args) {
 
+        char abc = 'Z';
+
+        do {
+            System.out.print(abc + " ");
+            abc--;
+        } while (abc >= 'A');
+    }
 }
 
 

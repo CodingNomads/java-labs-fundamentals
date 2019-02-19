@@ -1,5 +1,7 @@
 package com.codingnomads.part_02;
 
+import java.util.Scanner;
+
 /**
  * Part 2 Exercise 8:
  * <p>
@@ -9,5 +11,31 @@ package com.codingnomads.part_02;
  */
 public class Exercise_08 {
 
+    public static void main(String[] args) {
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter a number between 0 and 1.000.000.000.");
+
+        int number = scanner.nextInt();
+
+        int i = 0;
+
+
+        while (i != number) {
+            i++;
+        }
+        System.out.println("your number is: " + i);
+
+    }
 }
 
+
+
+        /*
+        while my loop number is not my input
+        continue looking for the number
+        when you found it
+        write it
+         */
