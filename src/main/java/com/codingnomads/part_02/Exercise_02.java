@@ -12,7 +12,5 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_02 {
-    public static void main(String[] args) {
-        
-    }
+
 }
