@@ -45,7 +45,7 @@ public class Exercise_11 {
             double futureAmt = invAmt + (invAmt * (intRate * years));
 
             System.out.println("The future value for your initial investment of " + invAmt + " at an interest rate of "
-                    + intRate + " during " + years + " year(s) will be: " + futureAmt);
+                    + intRate * 100 + "% during " + years + " year(s) will be: " + futureAmt);
         }
     }
 }
