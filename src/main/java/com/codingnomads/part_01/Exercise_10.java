@@ -8,5 +8,10 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_10 {
-
+    public static void main(String[] args) {
+        float hours = (30f+30f/60f)/60f;
+        float miles = 12f/1.6f;
+        float speed = miles/hours;
+        System.out.println("The runner's speed is " + speed + " miles per hour.");
+    }
 }
