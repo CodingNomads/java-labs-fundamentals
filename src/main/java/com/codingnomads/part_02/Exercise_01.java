@@ -1,4 +1,5 @@
 package com.codingnomads.part_02;
+import java.util.Scanner;
 
 /**
  * Part 2 Exercise 1:
@@ -13,6 +14,12 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_01 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner();
+
+    }
 
 
 }
