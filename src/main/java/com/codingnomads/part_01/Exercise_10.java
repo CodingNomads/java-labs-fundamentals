@@ -9,4 +9,20 @@ package com.codingnomads.part_01;
 
 public class Exercise_10 {
 
+    public static void main(String[] args) {
+
+        double distanceKm = 12.0;
+        double timeSeconds = ((30*60)+(30));
+
+        double distanceMiles = (distanceKm / 1.6);
+
+        double averageMilesPerSecond = distanceMiles / timeSeconds;
+
+        double averageMilesPerHour = averageMilesPerSecond * (60*60);
+
+        System.out.println("The runners average speed in miles per hour is: " + averageMilesPerHour);
+
+
+    }
+
 }
