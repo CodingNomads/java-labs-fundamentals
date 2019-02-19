@@ -1,5 +1,7 @@
 package com.codingnomads.part_02;
 
+import java.util.Scanner;
+
 /**
  * Part 2 Exercise 11:
  * <p>
@@ -14,6 +16,16 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Investment amount: ");
+        double invAmt = scanner.nextDouble();
+
+        System.out.println("Interest rate as a percentage: ");
+        //TODO: Finish this
+    }
 
 }
 

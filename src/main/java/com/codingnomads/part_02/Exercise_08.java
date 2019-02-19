@@ -1,5 +1,7 @@
 package com.codingnomads.part_02;
 
+import java.util.Scanner;
+
 /**
  * Part 2 Exercise 8:
  * <p>
@@ -8,6 +10,19 @@ package com.codingnomads.part_02;
  * exit the loop and print the number to the console.
  */
 public class Exercise_08 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a number from 0 to 1 million: ");
+        int userNum = scanner.nextInt();
+        int i = 0;
+
+        while (userNum != i) {
+            i++;
+        }
+        System.out.println("Found it! The number is : " + i);
+    }
 
 }
 
