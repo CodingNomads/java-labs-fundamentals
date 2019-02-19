@@ -10,7 +10,7 @@ package com.codingnomads.part_01;
  */
 public class Exercise_01 {
     public static void main(String[] args) {
-        System.out.println("<p>\nHello World!!\nI`m a programmer now.\nYeeehaw!");
+        System.out.println("Hello World!!\nI`m a programmer now.\nYeeehaw!");
     }
 
 

@@ -1,7 +1,5 @@
 package com.codingnomads.part_01;
 
-import java.util.*;
-
 /**
  * Part 1 Exercise 8:
  * <p>
@@ -12,13 +10,8 @@ import java.util.*;
 public class Exercise_08 {
     public static void main(String[] args) {
 
-        Scanner kb = new Scanner(System.in);
-
-        System.out.println("Enter Radius For Calculating Area & Perimeter");
-        int r = kb.nextInt();
-
-        double area = 3.14 * r * r;
-        double perimeter = 2 * 3.14 * r;
+        double area = 3.14 * 3.14 * Math.PI;
+        double perimeter = 2 * 3.14 * Math.PI;
 
         System.out.println("Area: " + area);
         System.out.println("Perimeter " + perimeter);

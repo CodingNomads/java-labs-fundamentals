@@ -16,11 +16,7 @@ public class Exercise_11 {
     public static void main(String[] args) {
         int totalSec = 365 * 24 * 60 * 60;
         int totalPop = 380123456;
-        totalPop += 3 * (totalSec / 6) + (totalSec / 40) - (totalSec / 12);
-
+        totalPop += 3 * ((totalSec / 6) + (totalSec / 40) - (totalSec / 12));
         System.out.println(totalPop);
-
-
     }
-
 }

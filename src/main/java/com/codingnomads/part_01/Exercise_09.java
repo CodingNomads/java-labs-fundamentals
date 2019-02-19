@@ -9,8 +9,8 @@ package com.codingnomads.part_01;
 
 public class Exercise_09 {
     public static void main(String[] args) {
-        double area = 2.4 * 6.4 / 2;
-        double perimeter = 2.4 * 3;
+        double area = 2.4 * 6.4;
+        double perimeter = 2.4 * 6.4 * 2;
 
         System.out.println("Area: " + area);
         System.out.println("Perimeter " + perimeter);
