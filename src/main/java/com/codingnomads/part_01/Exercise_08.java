@@ -1,6 +1,5 @@
 package com.codingnomads.part_01;
 
-import sun.jvmstat.perfdata.monitor.PerfStringVariableMonitor;
 import java.util.*;
 
 /**
@@ -23,7 +22,6 @@ public class Exercise_08 {
 
         System.out.println("Area: " + area);
         System.out.println("Perimeter " + perimeter);
-
     }
 
 }
