@@ -8,5 +8,11 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_10 {
+    public static void main(String[] args) {
+        double avgKm = 12.0 / ((30 * 60) + 30) * 3600;
+        double avgMiles = avgKm / 1.6;
+
+        System.out.println(avgMiles);
+    }
 
 }

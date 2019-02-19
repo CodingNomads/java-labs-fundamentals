@@ -8,5 +8,13 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_08 {
+    public static void main(String[] args) {
+
+        double area = 3.14 * 3.14 * Math.PI;
+        double perimeter = 2 * 3.14 * Math.PI;
+
+        System.out.println("Area: " + area);
+        System.out.println("Perimeter " + perimeter);
+    }
 
 }
