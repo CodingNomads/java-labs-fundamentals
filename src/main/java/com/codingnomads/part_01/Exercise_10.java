@@ -8,5 +8,14 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_10 {
+    public static void main(String[] args) {
+
+        int kms = 12;
+        double mins = 30.5;
+
+        double result = (kms / 1.6) / ((mins * 60) / 3600);
+
+        System.out.println(result);
+    }
 
 }
