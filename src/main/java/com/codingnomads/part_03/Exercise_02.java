@@ -9,3 +9,29 @@ package com.codingnomads.part_03;
 
  */
 
+class Exercise02 {
+    public static void main(String[] args) {
+
+        int x = 5;
+        int y = 12;
+        int d = 45;
+        int e = 32;
+
+        int z = add(x, y);
+        double zy = powerUp(d, e);
+
+        System.out.println("The values added up are: " + z + zy);
+
+
+    }
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static double powerUp (int a, int b) {
+        return Math.pow(a, b);
+    }
+
+}
+
