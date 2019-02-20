@@ -13,5 +13,15 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
+        int population = 380123456;
+        int seconds = 3 * 365* 24 * 60*60;
+        int newBorns = seconds/6;
+        int deadOnes = seconds/12;
+        int immigratedOnes = seconds/40;
+        int newPopulation = population + newBorns - deadOnes + immigratedOnes;
+
+        System.out.println(newPopulation);
+    }
 
 }

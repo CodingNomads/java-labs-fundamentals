@@ -8,5 +8,13 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_05 {
+    public static void main(String[] args) {
+        double a = (10.5 * 4.2 - 3.4 * 2);
+        double b = (86.9 -12.1);
+        double result = a/b;
+        System.out.println(result);
 
-}
+
+        }
+    }
+
