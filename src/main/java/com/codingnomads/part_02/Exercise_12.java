@@ -1,5 +1,5 @@
 package com.codingnomads.part_02;
-
+import java.util.*;
 /**
  * Part 2 Exercise 12:
  * <p>
@@ -12,5 +12,16 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_12 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter miles to drive: ");
+        double miles = scanner.nextDouble();
+        System.out.println("Enter MPG of the car: ");
+        double mpg = scanner.nextDouble();
+        System.out.println("Enter price per gallon of fuel: ");
+        double price = scanner.nextDouble();
+
+        System.out.println("The cost of the trip is " + miles / mpg * price);
+    }
 
 }

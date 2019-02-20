@@ -14,5 +14,12 @@ package com.codingnomads.part_02;
 
 public class Exercise_01 {
 
+    public static void celciusToFahrenheit(double celsius){
+        double fahrenheit = 9 * ( celsius / 5 ) + 32;
+        System.out.println(celsius+ " degrees celsius = " + fahrenheit + " degrees fahrenheit.");
+    }
 
+    public static void main(String[] args) {
+        celciusToFahrenheit(27.4);
+    }
 }
