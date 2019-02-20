@@ -14,4 +14,20 @@ package com.codingnomads.part_01;
 
 public class Exercise_11 {
 
+    public static void main(String[] args) {
+
+        int currentPopulation = 380123456;
+
+        int timeSpan = 3 * 12 * 365 * 24 * 60;
+
+        int numberBirth = timeSpan / 6;
+        int numberDeath = timeSpan / 12;
+        int numberImmigrate = timeSpan / 40;
+
+        int newPopulation = currentPopulation + (numberBirth) - (numberDeath) + (numberImmigrate);
+
+        System.out.println("The population in 3 years time will be: " + newPopulation);
+
+    }
+
 }
