@@ -15,10 +15,10 @@ import java.util.Scanner;
 
 public class Exercise_01 {
     public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Enter Degree");
-        double degree = kb.nextDouble();
+        double degree = keyboard.nextDouble();
 
         double fahrenheit = 9 * (degree / 5) + 32;
 

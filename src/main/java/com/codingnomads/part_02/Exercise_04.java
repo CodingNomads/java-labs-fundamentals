@@ -12,10 +12,10 @@ import java.util.Scanner;
 
 public class Exercise_04 {
     public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Enter Pounds");
-        double pound = kb.nextDouble();
+        double pound = keyboard.nextDouble();
 
         double kilograms = pound * 0.454;
 

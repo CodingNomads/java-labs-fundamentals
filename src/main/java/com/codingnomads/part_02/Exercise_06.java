@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 public class Exercise_06 {
     public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Enter a Number");
-        int val = kb.nextInt();
+        int val = keyboard.nextInt();
 
         switch (val){
             case 1:

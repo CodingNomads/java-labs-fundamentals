@@ -16,16 +16,16 @@ import java.util.Scanner;
 public class Exercise_12 {
     public static void main(String[] args) {
 
-        Scanner kb = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Enter Miles");
-        double miles = kb.nextDouble();
+        double miles = keyboard.nextDouble();
 
         System.out.println("Enter Miles Consumption Per Miles");
-        double mpg = kb.nextDouble();
+        double mpg = keyboard.nextDouble();
 
         System.out.println("Enter Fuel Price Per Gallon");
-        double price = kb.nextDouble();
+        double price = keyboard.nextDouble();
 
         double cost = miles * mpg * price;
 

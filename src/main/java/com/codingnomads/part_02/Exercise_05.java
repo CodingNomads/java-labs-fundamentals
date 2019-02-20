@@ -12,10 +12,10 @@ import java.util.Scanner;
 public class Exercise_05 {
     public static void main(String[] args) {
 
-        Scanner kb = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Enter a number");
-        int val = kb.nextInt();
+        int val = keyboard.nextInt();
 
         if(val == 1)
             System.out.println("ONE");

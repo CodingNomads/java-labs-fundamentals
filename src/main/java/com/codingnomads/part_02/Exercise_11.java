@@ -18,16 +18,16 @@ import java.util.Scanner;
 public class Exercise_11 {
     public static void main(String[] args) {
 
-        Scanner kb = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Enter Money for Investment");
-        double money = kb.nextDouble();
+        double money = keyboard.nextDouble();
 
         System.out.println("Enter Interest Rate");
-        double i = kb.nextDouble();
+        double i = keyboard.nextDouble();
 
         System.out.println("Enter Years to Invest");
-        int year = kb.nextInt();
+        int year = keyboard.nextInt();
 
         double futureVal = money * i * year / 100 + money;
 
