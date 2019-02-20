@@ -11,5 +11,16 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
 
+        System.out.println("a\ta*2\ta*4");
+
+        for (int i = 1; i <= 4; i++) {
+            String calculation = "";
+            for (int t = 1; t <= 4; t = t * 2) {
+                calculation += i * t + "\t";
+            }
+            System.out.println(calculation);
+        }
+    }
 }
