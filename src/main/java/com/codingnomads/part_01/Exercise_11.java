@@ -13,5 +13,16 @@ package com.codingnomads.part_01;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
+        int bornPerDay = (60 * 60 * 24) / 6;
+        int deadPerDay = (60 * 60 * 24) / 12;
+        int immPerDay = (60 * 60 * 24) / 40;
+        int currPop = 380123456;
+        int threeYearsInDays = 365 * 3;
+
+        System.out.println("The total population in 3 years will be: " + (currPop + (bornPerDay * threeYearsInDays) +
+                (immPerDay * threeYearsInDays) - (deadPerDay * threeYearsInDays)));
+
+    }
 
 }
