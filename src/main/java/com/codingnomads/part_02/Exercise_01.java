@@ -1,4 +1,5 @@
 package com.codingnomads.part_02;
+import java.util.Scanner;
 
 /**
  * Part 2 Exercise 1:
@@ -13,6 +14,19 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_01 {
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter the temperature in Celsius: ");
+
+        Scanner input = new Scanner(System.in);
+        double celsius = Double.parseDouble(input.nextLine());
+
+        double fahrenheit = (9 * (celsius/5) + 32);
+
+        System.out.println(celsius + " degrees celsius = degrees farenheit is: " + fahrenheit);
+
+    }
 
 
 }
