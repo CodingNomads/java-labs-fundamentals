@@ -9,3 +9,29 @@ package com.codingnomads.part_03;
 
  */
 
+
+class Returners {
+
+    public static void main(String[] args) {
+
+        Returners returner1 = new Returners();
+
+        int multi = returner1.multiply(5, 8);
+        int divi = returner1.divide(9, 3);
+
+        int unite = multi + divi;
+
+        System.out.println(unite);
+    }
+
+    private int multiply(int a, int b){
+        return a * b;
+
+    }
+
+    private int divide(int a, int b){
+        return a/b;
+
+    }
+
+}
