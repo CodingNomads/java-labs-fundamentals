@@ -1,5 +1,7 @@
 package com.codingnomads.part_02;
 
+import java.util.Scanner;
+
 /**
  * Part 2 Exercise 3:
  * <p>
@@ -10,5 +12,16 @@ package com.codingnomads.part_02;
  */
 
 public class Exercise_03 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("How many feet do you want to convert to meters: ");
+        double userFeet = scanner.nextDouble();
+
+        double meters = userFeet * 0.305;
+
+        System.out.println(userFeet + " in meters is: " + meters);
+    }
 
 }
