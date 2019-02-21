@@ -14,5 +14,17 @@ public class Exercise_05 {
 
     public static void main(String[] strings) {
 
+        int[] someArray = new int[10];
+
+        int data = 20;
+
+        for (int i = 0; i < someArray.length; i++) {
+            someArray[i] = data;
+            data++;
+        }
+
+        for (int x : someArray) {
+            System.out.println(x);
+        }
     }
 }
