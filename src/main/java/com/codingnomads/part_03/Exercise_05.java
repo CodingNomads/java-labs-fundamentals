@@ -16,14 +16,16 @@ public class Exercise_05 {
         if (userNum % 4 == 0 && userNum % 7 == 0) {
             System.out.println("it is divisible by 4 and 7");
         } // use the || operator to see if the user's number is divisible by 4 or 7
-        else if (userNum % 4 == 0 || userNum % 7 == 0) {
+        if (userNum % 4 == 0 || userNum % 7 == 0) {
             System.out.println("it is divisible by 4 or 7");
         } // use the ^ operator to see if the user's number is divisible for 4 or 7 exclusively
-        else if (userNum % 4 == 0 ^ userNum % 7 == 0) {
+        if (userNum % 4 == 0 ^ userNum % 7 == 0) {
             System.out.println("it is divisible for 4 or 7 exclusively");
         } else {
             System.out.println("It did not meet any criteria");
         }
+
+
         // print out the results
 
     }

@@ -47,9 +47,10 @@ class Exercise_06 {
         long totalHours = totalMinutes / 60;
 
         // Get the current hour
-        long currentHour = totalHours % 60;
+        long currentHour = totalHours % 12;
 
         // Display results using a 12 hour clock, include AM or PM
+
 
         String formattedTime = String.format("%02d", currentHour) + ":" + String.format("%02d", minuteWithinTheHour)
                 + ":" + String.format("%02d", secondWithinTheHour);
