@@ -1,5 +1,7 @@
 package com.codingnomads.part_03;
 
+import java.util.Scanner;
+
 /**
 
  Write a class that has at least 3 methods, one of which being a main() method. The two other methods need to use the
@@ -9,3 +11,32 @@ package com.codingnomads.part_03;
 
  */
 
+class Exercise_02{
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter Number 1");
+        int number1 = input.nextInt();
+
+        System.out.println("Enter Number 2");
+        int number2 = input.nextInt();
+
+        System.out.println(pow(number1, number2) + divide(number1, number2));
+    }
+
+    public static int pow(int number, int exponent){
+
+        int result = 1;
+
+        while(exponent-- > 0)
+            result *= number;
+
+        return result;
+    }
+
+    public static int divide(int val1, int val2){
+
+        return val1 / val2;
+    }
+}

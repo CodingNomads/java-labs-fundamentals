@@ -1,5 +1,6 @@
 package com.codingnomads.part_03;
 
+
 import java.util.Scanner;
 
 class Exercise_06 {
@@ -9,11 +10,40 @@ class Exercise_06 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter the time zone offset to GMT (ie, -8 or 8): ");
+        System.out.print("Enter the time zone offset to GMT: ");
         long timeZoneChange = input.nextInt();
+
+        while(timeZoneChange < -11 || timeZoneChange > 12){
+            System.out.println("Enter Valid Time Zone Offset -11 to +12");
+            timeZoneChange = input.nextInt();
+        }
 
         // Get total milliseconds since midnight, 1/1/1970
         long totalMilliseconds = System.currentTimeMillis();
+
+        int totalSeconds = (int)(totalMilliseconds / (1000));
+        int totalMinutes = totalSeconds / 60;
+        int totalHours = totalMinutes / 60;
+
+        int currentHour = ((int)timeZoneChange + totalHours) % 24;
+        int currenMinute = totalMinutes % 60;
+        int currentSecond = totalSeconds % 60;
+
+        String am_pm = "";
+
+        if (currentHour >= 0 && currentHour < 12)
+            am_pm = "AM";
+        else if (currentHour == 12 && currenMinute == 0)
+            am_pm = "AM";
+        else
+            am_pm = "PM";
+
+        currentHour = currentHour == 0 || currentHour == 12 ? 12 : currentHour % 12;
+
+
+        System.out.printf("Current Time: %02d:%02d:%02d %s", currentHour,currenMinute,currentSecond, am_pm);
+
+
 
         // Get total seconds since midnight, 1/1/1970
 
