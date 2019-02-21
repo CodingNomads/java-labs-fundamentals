@@ -32,7 +32,5 @@ public class Exercise_02 {
         System.out.println("The Volume of the cylinder is: " + volOfCyl + " and the Area is: " + areaOfCyl);
 
 
-    }
-
-
-}
+    };
+};
