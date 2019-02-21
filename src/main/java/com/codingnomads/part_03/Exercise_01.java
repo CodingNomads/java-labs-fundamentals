@@ -17,9 +17,11 @@ public class Exercise_01 {
 
     public static void main(String[] args) {
 
-        FootballLeagues EPL = new FootballLeagues("English Premier League","England & Wales", 20);
-        FootballLeagues SPL = new FootballLeagues("Scottish Premier League", "Scotland", 12);
+        FootballLeagues epl = new FootballLeagues("English Premier League","England & Wales", 20);
+        FootballLeagues spl = new FootballLeagues("Scottish Premier League", "Scotland", 12);
 
+        System.out.println(epl.getLeagueName()+"\n"+epl.getLeagueLocation()+"\n"+epl.getNumberOfTeams());
+        System.out.println(spl.getLeagueName()+"\n"+spl.getLeagueLocation()+"\n"+spl.getNumberOfTeams());
     }
 }
 
@@ -30,7 +32,9 @@ class FootballLeagues {
     private int numberOfTeams;
 
     FootballLeagues(String leagueName, String leagueLocation, int numberOfTeams){
-
+        this.leagueName = leagueName;
+        this.leagueLocation = leagueLocation;
+        this.numberOfTeams = numberOfTeams;
     }
 
     public String getLeagueName() {

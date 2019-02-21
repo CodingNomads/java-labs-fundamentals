@@ -88,10 +88,13 @@ public class Exercise_04 {
         switch (player) {
             case 0 :
                 status = (computer == 1) ? "You lose": "You win";
+                break;
             case 1 :
                 status = (computer == 2) ? "You lose": "You win";
+                break;
             case 2 :
                 status = (computer == 0) ? "You lose": "You win";
+                break;
         }
 
         return status;

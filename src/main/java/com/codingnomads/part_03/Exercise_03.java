@@ -11,7 +11,7 @@ class Exercise_03 {
 
 
         // use a for loop to iterate 1000 times
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1000; i++) {
 
             // Generate a random int between >= 1 and <= 12
             int month = 1 + (int) (Math.random() * ((12 - 1) + 1));

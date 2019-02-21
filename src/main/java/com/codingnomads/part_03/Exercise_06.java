@@ -16,14 +16,14 @@ class Exercise_06 {
         long totalMilliseconds = System.currentTimeMillis();
 
         // Get total seconds since midnight, 1/1/1970
-        long totalSeconds = (timeZoneChange * 60 * 60 ) + (System.currentTimeMillis()/1000);
+        long totalSeconds = totalMilliseconds/1000;
 
         // Get the current second within the minute within the hour
         long second = totalSeconds % (60);
 
         // Get total minutes
 
-        long totalMinutes = (timeZoneChange * 60) + (System.currentTimeMillis()/(1000 * 60));
+        long totalMinutes = totalSeconds / 60;
 
         // Get the current minute in the hour
 
@@ -31,11 +31,11 @@ class Exercise_06 {
 
         // Get the total hours
 
-        long totalHours = (timeZoneChange) + (System.currentTimeMillis() / (1000 * 60 * 60));
+        long totalHours = totalMinutes / 60;
 
         // Get the current hour
 
-        long hour = totalHours % (24);
+        long hour = (timeZoneChange + totalHours) % (24);
 
         // Display results using a 12 hour clock, include AM or PM
 
