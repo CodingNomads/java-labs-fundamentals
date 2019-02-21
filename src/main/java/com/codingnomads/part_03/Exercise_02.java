@@ -9,3 +9,28 @@ package com.codingnomads.part_03;
 
  */
 
+public class Exercise_02 {
+
+    public static void main(String[] args) {
+
+        int x = multiply(5,6);
+        int y = divide(8,4);
+
+        System.out.println((x + y));
+
+    }
+
+    static int multiply(int a, int b) {
+
+        int product = a * b;
+        return product;
+
+    }
+
+    static int divide(int a, int b) {
+
+        int divided = a / b;
+        return divided;
+    }
+
+}

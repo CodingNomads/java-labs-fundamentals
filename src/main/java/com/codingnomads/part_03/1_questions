@@ -4,53 +4,76 @@ Answer the following questions
 
 1) What is an instance variable?
 
+A variable that is specific to the instance that initiates the variable. e.g. variables of an object, but the variables are not common to other objects
 
 2) How do you create a new object?
 
+<Class name> <name of object> = new <class name>(parameters)
 
 3) After creating a new object, how do you set that objects instance variables?
 
+Either by passing parameters to the constructor to be used when the object initiates, or use setter methods.
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
 
 
 5) How many methods can you have in a class?
 
+Any amount
 
 6) How do you exit a method at any point?
 
+return statement
 
 7) What is the method signature required to return an "int" from a method?
 
+int <method name>(some parameters)
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
 
+int <method name>(some parameters)
+
+//method code
+
+return num;
 
 9) How do you pass a parameter to a method?
 
+In the () immediately after the method name in the method signature
 
 10) What is the method signature for a method named sum() that takes two int parameters and returns their sum as in int?
 
+int Sum(int a, int b)
 
 11) What is a constructor?
 
+Method for creating objects
 
 12) How does Java treat a class without a constructor?
 
+When initialising a method that does not have a specific constructor, Java will use the default constructor and provide default values to the object variables like 0 or null depending on type etc.
 
 13) What would the constructor for "public class Animal" look like?
+
+Animal(para a, para b, ...) {
+    // assign parameters to variables
+}
 
 
 14) What is the effect of passing parameters to a constructor?
 
+They can be used to initialise variables of the object
 
 15) When should you pass parameters to a constructor?
 
 
+
 16) What does the finalize() method do?
 
+A method invoked by the JVM to release resources used by objects before they're removed from memory
 
 17) What does the "this" keyword do?
+
 
 
 18) When should you use the "this" keyword?
@@ -59,7 +82,7 @@ Answer the following questions
 19) Write an example of the "this" keyword in action.
 
 
-20.) EXplain the difference between static and non-static variables.
+20.) Explain the difference between static and non-static variables.
 
 
 21.) Explain the difference between static and non-static methods.

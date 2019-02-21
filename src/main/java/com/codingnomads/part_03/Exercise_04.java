@@ -20,17 +20,32 @@ public class Exercise_04 {
 
         //create int variable "playerHand" that takes user input
 
+        int playerHand = input.nextInt();
+
         //create int variable "computerHand" that generates a random number 0-2
+
+        int computerHand = (int)(Math.random() * (2));
 
         //call the getHand method for the playerHand
 
+        String x = getHand(playerHand);
+
         //call the getHand method for the computerHand
+
+        String y = getHand(computerHand);
 
         //create an String variable "winner" by calling the determineWinner() method with parameters computerHand and playerHand
 
+        String winner = determineWinner(computerHand,playerHand);
+
         //print out the player hand and computer hand
 
+        System.out.println("The player's hand is: " + x);
+        System.out.println("The computer's hand is: " + y);
+
         //print out the winner
+
+        System.out.println(winner);
 
 
     }
@@ -40,6 +55,15 @@ public class Exercise_04 {
 
         // create a switch statement to determine each players hand - return the String, ie "scissor" that goes with the int "hand"
         // 0 = scissor, 1 = rock, 2 = paper
+
+        switch (hand) {
+            case 0:
+                return ("scissor");
+            case 1:
+                return ("rock");
+            case 2:
+                return ("paper");
+        }
 
 
         //this is a temporary return statement to squash error - you'll need to update
@@ -53,8 +77,22 @@ public class Exercise_04 {
 
         // determine if the game is a tie
 
+        if (computer == player) {
+
+            status = "You tied!";
+        }
+
+
         // if it is not a tie, use a switch statement and a turnery operator to determine the winner
 
+        switch (player) {
+            case 0 :
+                status = (computer == 1) ? "You lose": "You win";
+            case 1 :
+                status = (computer == 2) ? "You lose": "You win";
+            case 2 :
+                status = (computer == 0) ? "You lose": "You win";
+        }
 
         return status;
 

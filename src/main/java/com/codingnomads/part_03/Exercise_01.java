@@ -12,3 +12,79 @@ package com.codingnomads.part_03;
   sports teams, trees, beers, people and so on.
 
  **/
+
+public class Exercise_01 {
+
+    public static void main(String[] args) {
+
+        FootballLeagues EPL = new FootballLeagues("English Premier League","England & Wales", 20);
+        FootballLeagues SPL = new FootballLeagues("Scottish Premier League", "Scotland", 12);
+
+    }
+}
+
+class FootballLeagues {
+
+    private String leagueName;
+    private String leagueLocation;
+    private int numberOfTeams;
+
+    FootballLeagues(String leagueName, String leagueLocation, int numberOfTeams){
+
+    }
+
+    public String getLeagueName() {
+        return leagueName;
+    }
+
+    public void setLeagueName(String leagueName) {
+        this.leagueName = leagueName;
+    }
+
+    public String getLeagueLocation() {
+        return leagueLocation;
+    }
+
+    public void setLeagueLocation(String leagueLocation) {
+        this.leagueLocation = leagueLocation;
+    }
+
+    public int getNumberOfTeams() {
+        return numberOfTeams;
+    }
+
+    public void setNumberOfTeams(int numberOfTeams) {
+        this.numberOfTeams = numberOfTeams;
+    }
+}
+
+class FootballTeams {
+
+    private String TeamName;
+    private String TeamLocation;
+    private int positionLastSeason;
+
+    public String getTeamName() {
+        return TeamName;
+    }
+
+    public void setTeamName(String teamName) {
+        TeamName = teamName;
+    }
+
+    public String getTeamLocation() {
+        return TeamLocation;
+    }
+
+    public void setTeamLocation(String teamLocation) {
+        TeamLocation = teamLocation;
+    }
+
+    public int getPositionLastSeason() {
+        return positionLastSeason;
+    }
+
+    public void setPositionLastSeason(int positionLastSeason) {
+        this.positionLastSeason = positionLastSeason;
+    }
+}
