@@ -124,3 +124,5 @@ class Hello{
     static methods can be called before an object has been even created, only through the class, therefore also the psvm is static,
     because its gonna be the first thing to be called
     non-static ones need an object to be created to be called upon
+    can only call on other static methods and data, variables
+    only thru object building others are accessible

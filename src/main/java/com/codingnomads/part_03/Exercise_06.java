@@ -2,10 +2,7 @@ package com.codingnomads.part_03;
 
 import java.util.Scanner;
 
-/* AM PM missing
-ifs falls kleiner als 10 , 0 adden for design :P
-für < > für AM PM   dann noch switch um umzuwandeln in 1-12 statt bis 24 !?
-same time always timezone not working */
+//same time always, timezone not working
 
 
 class Exercise_06 {
@@ -22,7 +19,7 @@ class Exercise_06 {
         long totalMilliseconds = System.currentTimeMillis();
 
         // Get total seconds since midnight, 1/1/1970
-        long totalSeconds = totalMilliseconds/1000;
+        long totalSeconds = totalMilliseconds / 1000;
 
         // Get the current second within the minute within the hour
 
@@ -42,19 +39,23 @@ class Exercise_06 {
 
         // Get the current hour
 
-        long currentHour = (totalSeconds - totalMinutesInSeconds - totalHoursInSeconds)/3600;
+        long currentHour = (totalSeconds - totalMinutesInSeconds - totalHoursInSeconds) / 3600;
+
+        String amOrPm = "AM";
+
+        if(currentHour > 12){
+            currentHour -= 12;
+            amOrPm = "PM";
+        }
 
 
-        String AMPM = "AM";
-
-
-        // Display results using a 12 hour clock, include AM or PM
+    // Display results using a 12 hour clock, include AM or PM
         System.out.println("      --------------------");
-        System.out.println("     |"+ "\t\t\t \t \t |");
-        System.out.println("     |  " + currentHour + " : " + currentMinute + " : " + currentSecond + " " + AMPM + "   |");
-        System.out.println("     |" + "\t\t\t \t \t |");
+        System.out.println("     |"+"\t\t\t \t \t |");
+        System.out.println("     |  "+currentHour +" : "+currentMinute +" : "+currentSecond +" "+amOrPm +"   |");
+        System.out.println("     |"+"\t\t\t \t \t |");
         System.out.println("      --------------------");
 
-    }
+}
 }
 
