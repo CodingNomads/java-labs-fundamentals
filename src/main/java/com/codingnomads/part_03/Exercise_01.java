@@ -12,3 +12,83 @@ package com.codingnomads.part_03;
   sports teams, trees, beers, people and so on.
 
  **/
+
+public class Exercise_01 {
+
+    public static void main(String[] args) {
+
+        FootballLeagues epl = new FootballLeagues("English Premier League","England & Wales", 20);
+        FootballLeagues spl = new FootballLeagues("Scottish Premier League", "Scotland", 12);
+
+        System.out.println(epl.getLeagueName()+"\n"+epl.getLeagueLocation()+"\n"+epl.getNumberOfTeams());
+        System.out.println(spl.getLeagueName()+"\n"+spl.getLeagueLocation()+"\n"+spl.getNumberOfTeams());
+    }
+}
+
+class FootballLeagues {
+
+    private String leagueName;
+    private String leagueLocation;
+    private int numberOfTeams;
+
+    FootballLeagues(String leagueName, String leagueLocation, int numberOfTeams){
+        this.leagueName = leagueName;
+        this.leagueLocation = leagueLocation;
+        this.numberOfTeams = numberOfTeams;
+    }
+
+    public String getLeagueName() {
+        return leagueName;
+    }
+
+    public void setLeagueName(String leagueName) {
+        this.leagueName = leagueName;
+    }
+
+    public String getLeagueLocation() {
+        return leagueLocation;
+    }
+
+    public void setLeagueLocation(String leagueLocation) {
+        this.leagueLocation = leagueLocation;
+    }
+
+    public int getNumberOfTeams() {
+        return numberOfTeams;
+    }
+
+    public void setNumberOfTeams(int numberOfTeams) {
+        this.numberOfTeams = numberOfTeams;
+    }
+}
+
+class FootballTeams {
+
+    private String TeamName;
+    private String TeamLocation;
+    private int positionLastSeason;
+
+    public String getTeamName() {
+        return TeamName;
+    }
+
+    public void setTeamName(String teamName) {
+        TeamName = teamName;
+    }
+
+    public String getTeamLocation() {
+        return TeamLocation;
+    }
+
+    public void setTeamLocation(String teamLocation) {
+        TeamLocation = teamLocation;
+    }
+
+    public int getPositionLastSeason() {
+        return positionLastSeason;
+    }
+
+    public void setPositionLastSeason(int positionLastSeason) {
+        this.positionLastSeason = positionLastSeason;
+    }
+}
