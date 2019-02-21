@@ -1,5 +1,7 @@
 package com.codingnomads.part_03;
 
+import java.util.Scanner;
+
 public class Exercise_05 {
 
     public static void main(String[] strings) throws java.io.IOException {
@@ -18,6 +20,24 @@ public class Exercise_05 {
 
         // print out the results
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter number between 0 - 1.000.000");
+        int val = input.nextInt();
+
+        if (val % 4 == 0 && val % 7 == 0)
+            System.out.println("Your number is divisible both 4 & 7");
+
+        if (val % 4 == 0 || val % 7 == 0){
+            String divider = val % 4 == 0 ? "4" : "7";
+            System.out.println("Your number is divisible by " + divider);
+        }
+
+        if (val % 4 == 0 ^ val % 7 == 0){
+            String divider = val % 4 != 0 ? "4" : "7";
+            System.out.println("Your number is not divisible by " + divider);
+            return;
+        }
     }
 }
 
