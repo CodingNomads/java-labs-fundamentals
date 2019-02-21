@@ -16,5 +16,28 @@ public class Exercise_03 {
 
     public static void main(String[] strings) {
 
+//        int[row][column]
+        int[][] someArray = new int[5][10];
+        int content = 0;
+
+        for (int rowIndex = 0; rowIndex < 5; rowIndex++) {
+            for (int columnIndex = 0; columnIndex < 10; columnIndex++) {
+                someArray[rowIndex][columnIndex] = content;
+                content++;
+            }
+        }
+
+        for (int rowIndex = 0; rowIndex < 5; rowIndex++) {
+            System.out.println();
+            for (int columnIndex = 0; columnIndex < 10; columnIndex++) {
+                System.out.print(someArray[rowIndex][columnIndex] + " ");
+            }
+        }
+
+
+
+
+
+
     }
 }
