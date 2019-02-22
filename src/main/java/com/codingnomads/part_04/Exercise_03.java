@@ -16,5 +16,23 @@ public class Exercise_03 {
 
     public static void main(String[] strings) {
 
+        int[][] numChart = new int[5][10];
+
+        for(int num = 0; num < 50;){
+            for(int i = 0; i < 5; i++){
+                for(int x = 0; x < 10; x++){
+                    numChart[i][x] = num;
+                    num++;
+                    }
+            }
+        }
+
+
+        for (int[] arr : numChart) {
+            for (int v : arr) {
+                System.out.print(" " + v);
+            }
+            System.out.println();
+        }
     }
 }

@@ -1,49 +1,112 @@
 Answer the following questions:
 
 1) What is an array?
+An array is a collection of variables of the same type, referred to by a common name.
 
 2) What the code required to create (instantiate) a String array with size 10 named "cats"?
+String[] cats = new String[10];
 
 3) What is a multidimensional array?
+A multidimensional array is an array containing more than one arrays.
 
 4) What is the code required to create (instantiate) a 2-dimensional int array that is 6 high and 6 wide named "scores"?
+int[][] scores = new int[6][6];
 
 5) Using code, how do you retrieve a String that is the 10th item in a traditional array named dogs?
+dogs[9];
 
 6) What is an ArrayIndexOutOfBoundsException?
+This exception occurs when you try to access a index of the array that is greater than the size of the array.
 
 7) Using one line of code, demonstrate how to retrieve the second to the last item from a int array.
 
+
 8) What is the maximum allowable size of an array in Java?
+Integer.MAX_VALUE - 5 (Integer.MAX_VALUE - 5 = 2^31-1 = 2147483647 )
+https://stackoverflow.com/questions/3038392/do-java-arrays-have-a-maximum-size
 
 9) What is a bubble sort?
+Bubble sort is the simplest sorting alogorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order.
 
 10) How does a bubble sort work?
+Given an array with random numbers in random order: (2 4 9 1 3)
+2 moves to after 1: (4 9 1 2 3)
+4 moves to pass 3: (9 1 2 3 4)
+9 moves to pass 4: (1 2 3 4 9)
 
 11) When might you use an irregular array? What is a good example of an irregular array?
+You use an irregular array when you want to create multidimensional arrays of non-uniform size.
+For ex. use an int array to log the class grades of students who take different numbers of classes in a semester.
 
 12) Demonstrate how to iterate through an array, printing each value, using a for loop.
+for(var i = 0; i < arrayName.length; i++){
+}
+
+OR
+for(int i : arrayName){
+}
 
 13) Demonstrate how to iterate through an array, printing each value, using a while loop.
+while(int i < array.length){
+    system.out.println(array[i]);
 
 14) What is a queue?
+The Java queue interface represents a data structure designed to have elements inserted at the end of the queue,
+and elements removed from the beginning of the queue, following the FILO model.
 
 15) What are the two primary operations that a queue performs?
+1. enqueue: to add an element to the end of a queue.
+2. dequeue: to remove an element from the start of a queue.
 
 16) What is a stack?
+A stack is a collection of objects that is based on the LIFO concept.
 
 17) What differentiates stacks and queues?
+Que is FILO; stack is LIFO.
 
 18) When would you use an enhanced for loop?
+When iterating through an array.
 
 19) What is "The Collections Framework"? What classes does it include?
+The collections framework is a unified architecture for representing and manipulating collections, enabling collections to be manipulated independently of implementation details.
+It includes:
+1. AbstractCollection
+2. AbstractList
+3. AbstractSequentialList
+4. LinkedList
+5. ArrayList
+6. AbstractSet
+7. HashSet
+8. LinkedHashSet
+9. TreeSet
+10. AbstractMap
+11. HashMap
+12. TreeMap
+13. WeakHashMap
+14. LinkedHashMap
+15. IdentityHashMap
 
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
+1. Create a for loop to iterate over the first index of the array: ex. change i in array[i][]
+2. Create a for loop to iterate over the second index of the array: ex. change i in array[][i]
 
 21) What is a String?
+The String class represents character strings. All string literals in Java programs, such as "abc", are implemented as instances of this class.
 
 22) What are a few common methods for operating on Strings?
+toString()
+contains()
+indexOf()
+isEmpty()
+toUpperCase()
+
 
 23) What does "Strings are immutable" mean?
+Strings are constant. Their values cannot be changed after they are created. i9
+
 
 24) Using the CLI, how do you invoke a Java application and provide two parameters to the main method?
+javac file_name.java
+java file_name [the two parameters]
+
+*file_name.java contains the main method.
