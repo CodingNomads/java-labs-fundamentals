@@ -16,5 +16,19 @@ public class Exercise_03 {
 
     public static void main(String[] strings) {
 
+        int [] [] multiDim = new int [5][10];
+        int count = 0;
+
+        for(int i = 0; i < multiDim.length; ++i) {
+            for (int k = 0; k < multiDim[i].length; ++k)
+                multiDim[i][k] = count++;
+        }
+
+        for(int [] array : multiDim) {
+            for (int val : array)
+                System.out.print(val + " ");
+
+            System.out.println();
+        }
     }
 }

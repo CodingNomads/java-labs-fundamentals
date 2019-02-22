@@ -14,5 +14,9 @@ public class Exercise_05 {
 
     public static void main(String[] strings) {
 
+        int [] array = {2,4,6,8,10};
+
+        for(int val : array)
+            System.out.print(val);
     }
 }
