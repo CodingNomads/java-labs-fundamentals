@@ -1,5 +1,4 @@
 package com.codingnomads.part_04;
-import java.util.*;
 
 
 /**
@@ -24,10 +23,17 @@ public class Exercise_07{
 
 class Stack{
 
+    private class Node{
+
+    }
+
     private String stack;
 
     //push method
+    public void push(String input){
 
+
+    }
 
     //pop method
 
