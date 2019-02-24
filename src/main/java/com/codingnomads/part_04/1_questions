@@ -82,13 +82,21 @@ while(int i < array.length){
 System.out.println(array[i]);
 }
 
-14) What is a queue?
+*14) What is a queue?
 
-15) What are the two primary operations that a queue performs?
+The Java Queue interface, java.util.Queue represents a data structure.
+The Java Queue interface is a subtype of the Java Collection interface. It represents an ordered sequence of objects just
+like a Java List, but its intended use is slightly different.
 
-16) What is a stack?
+*15) What are the two primary operations that a queue performs?
 
+It is designed to have elements inserted at the end of the queue,
+and elements removed from the beginning of the queue.
+This is similar to how a queue in a supermarket works.
 
+*16) What is a stack?
+
+a data structure, a stack class that extends Vector class
 
 *17) What differentiates stacks and queues?
 
@@ -99,8 +107,10 @@ queues: FIFO concept
 
 to populate or iterate through a multidimensional arrays
 
-19) What is "The Collections Framework"? What classes does it include?
+*19) What is "The Collections Framework"? What classes does it include?
 
+The Java collections framework is a set of classes and interfaces that implement commonly
+reusable collection data structures
 
 *20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
 
