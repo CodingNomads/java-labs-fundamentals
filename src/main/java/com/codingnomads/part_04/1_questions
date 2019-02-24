@@ -1,49 +1,86 @@
 Answer the following questions:
 
 1) What is an array?
+It is a set of objects of a particular type
 
 2) What the code required to create (instantiate) a String array with size 10 named "cats"?
+String[] cats = new String[10];
 
 3) What is a multidimensional array?
+An array of arrays typically represented as a Matrix or cube
 
 4) What is the code required to create (instantiate) a 2-dimensional int array that is 6 high and 6 wide named "scores"?
+int[][] scores = new int[6][6];
 
 5) Using code, how do you retrieve a String that is the 10th item in a traditional array named dogs?
+dogs[10]
 
 6) What is an ArrayIndexOutOfBoundsException?
+Exception attempting to read from an invalid array index
 
 7) Using one line of code, demonstrate how to retrieve the second to the last item from a int array.
+someArray[-2]
 
 8) What is the maximum allowable size of an array in Java?
+2147483647
 
 9) What is a bubble sort?
+A simple algorithm which looks for the min or max number in an array - not efficient
 
 10) How does a bubble sort work?
+It iterates through every element of the array and moves the higher / lower value to one side until  they are all organized
 
 11) When might you use an irregular array? What is a good example of an irregular array?
+an array with irregular 'columns' and 'rows'
 
 12) Demonstrate how to iterate through an array, printing each value, using a for loop.
+for (int i = 1; i < userArray.length; i+=2) {
+            System.out.print(userArray[i] + ",");
+        }
+
 
 13) Demonstrate how to iterate through an array, printing each value, using a while loop.
+int i = 0;
+while(i < someArray.length) {
+    System.out.println(someArray[i]);
+    i++;
+}
 
 14) What is a queue?
+First in, first last group of objects
 
 15) What are the two primary operations that a queue performs?
+add and remove or queue and dequeue
 
 16) What is a stack?
+Last in First out group of object
 
 17) What differentiates stacks and queues?
+FIFO vs LIFO
 
 18) When would you use an enhanced for loop?
+when I need to iterate through every object in an array
 
 19) What is "The Collections Framework"? What classes does it include?
+It is a java framework which implements different objects / data structures to organize object - includes stack, queue, linkedlist, etc.
 
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
+int[][] someArray = new int[1][2];
+        for (int rowIndex = 0; rowIndex < 5; rowIndex++) {
+            System.out.println();
+            for (int columnIndex = 0; columnIndex < 10; columnIndex++) {
+                System.out.print(someArray[rowIndex][columnIndex] + " ");
+            }
+        }
 
 21) What is a String?
+An object wich leverages chars and methods to build other String objects
 
 22) What are a few common methods for operating on Strings?
+length, charAt, hashCode, etc.
 
 23) What does "Strings are immutable" mean?
+Strings can NEVER change
 
 24) Using the CLI, how do you invoke a Java application and provide two parameters to the main method?
+java app_name param1,param2
