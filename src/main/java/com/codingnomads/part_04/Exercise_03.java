@@ -16,5 +16,26 @@ public class Exercise_03 {
 
     public static void main(String[] strings) {
 
-    }
+        int[][] twoDimensions = new int[9][4];
+
+        for (int i = 0; i < twoDimensions.length; i++) {
+            for (int t = 0; t < twoDimensions.length; t++) {
+                twoDimensions[i][t] = i + t +i*10;
+
+              /* if(i == 1) twoDimensions[i][t] = i + t +10; // = +i*10
+                if(i == 2) twoDimensions[i][t] = i + t + 20;
+                if(i == 3)twoDimensions[i][t] = i + t +30;
+                if(i == 4)twoDimensions[i][t] = i + t +40; */
+
+            }
+        }
+        for (int i = 0; i < twoDimensions.length; i++) {
+            for (int t = 0; t < twoDimensions.length; t++) {
+
+                System.out.println(twoDimensions[i][t]);
+        }
+            System.out.println();
+
+        }
+}
 }

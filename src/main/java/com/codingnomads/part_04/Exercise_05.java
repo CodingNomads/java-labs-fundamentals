@@ -14,5 +14,17 @@ public class Exercise_05 {
 
     public static void main(String[] strings) {
 
+        int[] myArray = new int[6];
+
+        for(int i = 0; i < myArray.length; i++){
+
+            myArray[i] = i * 7;
+}
+
+        for(int x : myArray){
+            System.out.println(x);
+        }
+
+
     }
 }
