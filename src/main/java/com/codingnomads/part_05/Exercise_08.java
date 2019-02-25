@@ -5,3 +5,10 @@ package com.codingnomads.part_05;
  * of the outer class. Also, within the inner class, call at least two methods that have a return type of int. Add these
  * two ints together and set a final instance variable in the outer with this value.
  */
+
+
+/*
+inner/nested class.
+Add these
+        * two ints together and set a final instance variable in the outer with this value.
+ */

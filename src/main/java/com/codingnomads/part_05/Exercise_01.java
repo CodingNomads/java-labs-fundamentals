@@ -8,3 +8,81 @@ package com.codingnomads.part_05;
  * private instance variables. Use System.out.println at various points to demonstrate the flow of execution and
  * the varying state of each private variable. You may name these classes whatever you like.
  */
+
+
+class Universe{
+    public static void main(String[] args) {
+        Sun earth = new Sun();
+        //set variables in class sun
+         earth.setColor("burningYellow");
+         earth.setDiameter(1000);
+         earth.setStatus(true);
+
+        System.out.println("sun: \n" + earth.color + "\n"+earth.diameter + "\n"+earth.status + " which means, she is shining");
+        System.out.println();
+
+        earth.setBlueEarthMoon(1000, "bluewhite", true );
+
+
+    }
+}
+
+class Sun{
+    int diameter;
+    String color;
+    boolean status;
+
+
+    public void setDiameter(int diameter) {
+        this.diameter = diameter;
+    }
+
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+
+    }
+
+
+    public void setBlueEarthMoon(int diameter, String color, boolean status){
+
+        //instance of moon set moon variables
+        Moon blueEarth = new Moon();
+
+        blueEarth.setColor(color);
+        blueEarth.setStatus(status);
+        blueEarth.setDiameter(diameter);
+
+        System.out.println("moon: \n" + blueEarth.color);
+    }
+
+}
+
+class Moon{
+    int diameter;
+    String color;
+    boolean status;
+
+
+    public void setDiameter(int diameter) {
+        this.diameter = diameter;
+    }
+
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+}
