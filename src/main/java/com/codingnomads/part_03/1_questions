@@ -3,64 +3,100 @@ Answer the following questions
 
 
 1) What is an instance variable?
-
+An instance variable is a member of a class, that is declared outside of methods. Depending on the access modifiers, instance variables are also visible to other members of the same class or other classes.
 
 2) How do you create a new object?
+1. declare reference to object:
+ClassName objectName;
+2. instantiate an object of Class type:
+objectName = new ClassName();
 
+OR:
+1. declare and allocate the object in one step:
+ClassName objectName = new ClassName();
 
 3) After creating a new object, how do you set that objects instance variables?
+With the dot operator:
+objectName.instanceVarName
 
+OR, if the variable is private (recommended!!), you could set it through the setter method.
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
-
+In java, no variable can hold an object. Variables can only hold a reference (/pointer) to the (memory location) of the object.
 
 5) How many methods can you have in a class?
-
+65535 according to Roi / https://stackoverflow.com/questions/4342072/what-is-the-maximum-number-of-methods-a-java-class-can-have
 
 6) How do you exit a method at any point?
-
+With the keyword return
 
 7) What is the method signature required to return an "int" from a method?
-
+int methodName(){
+}
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
-
+int methodName(int num){
+    return num;
+}
 
 9) How do you pass a parameter to a method?
-
+methodName(parameter){
+}
 
 10) What is the method signature for a method named sum() that takes two int parameters and returns their sum as in int?
-
+int sum(int num1, int num2){
+    return num1 + num2;
+}
 
 11) What is a constructor?
-
+AA constructor initializes an object when it is created.
 
 12) How does Java treat a class without a constructor?
-
+Java gives the class a default constructor (with no arguments). Default constructor provides the default values to the object,
+like 0, null, etc, depending on the type.
 
 13) What would the constructor for "public class Animal" look like?
-
+public Animal(){
+}
 
 14) What is the effect of passing parameters to a constructor?
-
+With parameterized constructors, data members with the values of passed arguments can be initialized when the object of the class is created.
 
 15) When should you pass parameters to a constructor?
-
+When you want to initialize values when the object of the class is created.
 
 16) What does the finalize() method do?
-
+The finalize() method is used to ensure that an object terminates cleanly. Ex. used to make sure an open file owned by an object is closed.
+It is called right before garbage collection.
 
 17) What does the "this" keyword do?
-
+The "this" keyword is used to refer to the members of a class if local variables have the same name.
 
 18) When should you use the "this" keyword?
-
+Ex. use "this" keyword to refer to instance variables of a class in a constructor if the constructor has a parameter with the same nae as an instance variable.
 
 19) Write an example of the "this" keyword in action.
+class Book{
+//instance variables
+String title;
+int pages;
 
+    //constructor
+    Book(String title, int pages){
+        this.title = title;
+        this.pages = pages;
+    }
 
-20.) EXplain the difference between static and non-static variables.
+}
 
+20.) Explain the difference between static and non-static variables.
+Static variables are shared with all instances of a class. They are for values which are specific to the class and not a specific instance.
+A static instance variable can be accessed without creating an object of its containing class.
+Ex. ClassName.variable()
+Non-static instance variables are variables specific to a specific instance of the class.
 
 21.) Explain the difference between static and non-static methods.
+A static method is called with: ClassName.methodName.
+A non-static method belongs to an object(/instance) of the class and needs to be instantiated to access it.
+
 
