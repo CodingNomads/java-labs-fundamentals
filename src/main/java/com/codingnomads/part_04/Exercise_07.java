@@ -1,6 +1,8 @@
 package com.codingnomads.part_04;
 
 
+import java.util.Arrays;
+
 /**
  The complement of a queue is a stack. It uses first-in, last-out accesssing and is often likened to a stack of plates.
 The first plate put on the table is the last plate used. Create a stack class called Stack that can hold characters. Call
@@ -10,37 +12,54 @@ Keep all other members of the Stack class private.
 
 public class Exercise_07{
     public static void main(String[] args) {
-//        Stack<String> abcStack = new Stack<>();
-//
-//        abcStack.push("a");
-//        abcStack.push("b");
-//        abcStack.push("c");
-//
-//        abcStack.pop();
+        Stack abcStack = new Stack();
+
+        abcStack.setSize(10);
+        abcStack.push('a');
+        abcStack.push('b');
+        abcStack.push('c');
+
+        abcStack.pop();
+        abcStack.show();
 
     }
 }
 
 class Stack{
 
-    private class Node{
+    private char[] myStack = new char[10];
+    private int size = 0;
 
+    //define size method when created
+    public void setSize(int num){
+        num = size;
     }
 
-    private String stack;
-
     //push method
-    public void push(String input){
-
-
+    public void push(char input){
+        myStack[size] = input;
+        size ++;
     }
 
     //pop method
-
-    //define size method when created
-
-
-
+    public void pop(){
+        size --;
+    }
 
 
+
+    //show Stack
+    public void show(){
+        for(int i = 0; i < size; i++){
+            System.out.println(myStack[i]);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Stack{" +
+                "myStack=" + Arrays.toString(myStack) +
+                ", size=" + size +
+                '}';
+    }
 }
