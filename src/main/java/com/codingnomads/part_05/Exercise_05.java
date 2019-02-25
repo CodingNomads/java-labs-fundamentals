@@ -7,3 +7,22 @@ package com.codingnomads.part_05;
  * out "Hello Recursion!" 10 times.
  *
  */
+
+class RecursiveSample{
+    public static void main(String[] args) {
+
+        recursion(10);
+
+    }
+
+    public static void recursion(int val){
+        if(val == 1) {
+            System.out.println("Hello Recursion");
+        }
+
+        else {
+            System.out.println("Hello Recursion");
+            recursion(val - 1);
+        }
+    }
+}

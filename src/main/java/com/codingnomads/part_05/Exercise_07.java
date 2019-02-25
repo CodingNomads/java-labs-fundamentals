@@ -1,72 +1,85 @@
 package com.codingnomads.part_05;
 
-/**
- * Write two classes. Class_01 should have the main(). Class_02 should have various instance variables. At least one of
- * must be static. Within class_01 create at least 3 instances of class_02. Set the instance variables of class_02. Then,
- * just once, in one place, set the static instance variable in class_02. Afterwards, print out the value of each instance
- * variable and the static variable for each class.
- */
-
-class BaseballTeams {
-
-    private String league;
-    private char division;
-    static int numOfPlayers;
-
-    public String getLeague() {
-        return league;
-    }
-
-    public void setLeague(String league) {
-        this.league = league;
-    }
-
-    public char getDivision() {
-        return division;
-    }
-
-    public void setDivision(char division) {
-        this.division = division;
-    }
-
-    public static int getNumOfPlayers() {
-        return numOfPlayers;
-    }
-
-    public static void setNumOfPlayers(int numOfPlayers) {
-        BaseballTeams.numOfPlayers = numOfPlayers;
-    }
-}
+import java.util.Random;
 
 
-class TeamConstructor {
+class Constructor {
+
+    /**
+     * Write two classes. Class_01 should have the main(). Class_02 should have various instance variables. At least one of
+     * must be static. Within class_01 create at least 3 instances of class_02. Set the instance variables of class_02. Then,
+     * just once, in one place, set the static instance variable in class_02. Afterwards, print out the value of each instance
+     * variable and the static variable for each class.
+     */
 
     public static void main(String[] args) {
 
-        BaseballTeams blueJays = new BaseballTeams();
-        BaseballTeams indians = new BaseballTeams();
-        BaseballTeams reds = new BaseballTeams();
-        BaseballTeams rockies = new BaseballTeams();
+        Random random = new Random();
 
+        Enemy enemy;
 
-        blueJays.setDivision('E');
-        blueJays.setLeague("AL");
+        int enemyId;
 
-        indians.setLeague("AL");
-        indians.setDivision('C');
+        for (int i = 0; i < 100 ; i++) {
+            int shoot = random.nextInt(2);
 
-        reds.setLeague("NL");
-        reds.setDivision('C');
+            enemy = new Enemy(i);
 
-        rockies.setLeague("NL");
-        rockies.setDivision('W');
+            enemy.openFire(shoot, i);
+        }
 
-        BaseballTeams.numOfPlayers=32;
-
-        System.out.println("The Blue Jays have " + " " + BaseballTeams.numOfPlayers + " " + "players");
-        System.out.println("The Blue Jays are in the" + " " + blueJays.getLeague());
-
-
+        System.out.println("Total Enemy Created = " + Enemy.getTotalNumber());
+        System.out.println("Total Enemy Killed = " + Enemy.getNumberOfEnemyKilled());
+        System.out.println("Total Enemy Score = " + Enemy.getEnemyScore());
     }
 
 }
+
+class Enemy{
+    private static int enemyScore;
+    private static int numberOfEnemyKilled;
+    private static int totalNumber;
+    private int enemyID;
+
+    public Enemy(int enemyID){
+        this.enemyID = enemyID;
+        ++totalNumber;
+    }
+
+    public void openFire(int shoot, int id){
+
+        if(shoot == 0){
+            ++numberOfEnemyKilled;
+            System.out.println("Enemy " + id + " shot you!");
+            return;
+        }
+        else if(shoot == 1){
+            ++enemyScore;
+            System.out.println("You killed enemy " + id);
+            return;
+        }
+    }
+
+    public static int getEnemyScore() {
+        return enemyScore;
+    }
+
+    public static int getNumberOfEnemyKilled() {
+        return numberOfEnemyKilled;
+    }
+
+    public static int getTotalNumber() {
+        return totalNumber;
+    }
+
+    public int getEnemyID() {
+        return enemyID;
+    }
+
+    public void setEnemyID(int enemyID) {
+        this.enemyID = enemyID;
+    }
+
+
+}
+
