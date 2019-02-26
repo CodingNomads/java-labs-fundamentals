@@ -1,26 +1,72 @@
 1) Describe the exception hierarchy.
+java.lang -> Objects -> Throwable -> Exception -> RunTimeExceptions
+                                               -> Other Exceoptions
+                                  -> Errors
 
 2) What is a try/catch statement?
+It is a Java statement design to protect code from errors and proactively catch them
 
 3) Why do we use try/catch statements?
+To protect our code agains potential exception generators
 
 4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
 
+try {
+    sout(dividebyzero);
+    } catch (ArithmeticException e) {
+    sout("You cannot divide by zero");
+    } finally {
+    serverConnection.close();
+    }
+
 5) What does it mean to "throw" an exception? How does it work?
+It means to pass an exception to a parent method / class
 
 6) What happens if your application encounters an exception and you don't catch it or throw it?
+The program will end
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
+Subclass exception first so you understand where they are coming from
 
 8) Write a nested try/catch statement.
 
+try{
+    something...
+    try{
+        something_else;
+    } catch (SomeException e) {
+        someBehaviour;
+    }
+} catch {
+    someParentCatchThing;
+    }
+
 9) What does it mean to rethrow an exception?
+
+To continously pass the exception upwards
 
 10) What are the 7 methods that come with the Throwable class?
 
+getMessage();
+getCause();
+toString();
+printStackTrace();
+getStackTrace();
+fillInStackTrace();
+getLocalizedMessage();
+and more!!!
+
 11) What does the "finally" block do?
+
+Executes a block code regardless of the outcome
 
 12) When is the finally block executed? Will it ever not be executed?
 
+it is ALWAYS executed, at the end.
+
 13) What are the three recently added features to Java exceptions?
+
+- MultiCatch Exceptions
+- Rethrow Exception
+- Try with resources
