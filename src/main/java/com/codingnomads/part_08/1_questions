@@ -1,26 +1,78 @@
 1) Describe the exception hierarchy.
 
+Exceptions and errors are sub classes of throwable which is subclass of Object.
+errors are serious failures that should not be caught in a try/catch block
+exceptions are further subdivided into run-time exceptions and everything else and should be dealt with by try/catch
+
 2) What is a try/catch statement?
+
+try/catch is used to encase the block of code that may generate an exception. The try part of the block attempts to run the code. If an exception error occurs of the type expected by the catch statement,
+the exception object is passed to the catch block and the block of code within the catch is executed.
 
 3) Why do we use try/catch statements?
 
+When we have a block of code that could possibly give rise to an exception error.
+
 4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
+
+try {
+
+} catch {
+
+} finally {
+
+}
 
 5) What does it mean to "throw" an exception? How does it work?
 
+When you don't want handle the exception at the point at where it occurred (method) but instead throw it to the place where it was called.
+
+checked exception - deal with try/catch or throws
+
 6) What happens if your application encounters an exception and you don't catch it or throw it?
+
+a runtime exception will occur and the program will crash.
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
 
+We should catch in the subclass. The superclass has no knowledge of what occurs in its subclasses.
+
 8) Write a nested try/catch statement.
+
+try {
+    try {
+    // code block to execute
+    } catch (Parent exception object {
+        sout("some message to the user")
+    }
+    } catch (subclass exception object) {
+        sout("some more specific message to the user"
+}
+
 
 9) What does it mean to rethrow an exception?
 
+to return the exception obj to the class that called the method
+
 10) What are the 7 methods that come with the Throwable class?
+
+fillnStackTrace()
+String getLocalizedMessage
+String getMessage()
+void printStack()
+void printStackTrace(PrintSteam stream)
+void printStackTrace(PrintWriter stream)
+String toString()
 
 11) What does the "finally" block do?
 
+    contain block of code that always executes after the try/catch
+
 12) When is the finally block executed? Will it ever not be executed?
 
-13) What are the three recently added features to Java exceptions?
+finally will always execute when we try to leave a try/catch block. If we do not enter the try/catch then it will not execute.
+
+1) try with resources
+2) automatic resource management - releasing unused resources
+3) multi-catch
