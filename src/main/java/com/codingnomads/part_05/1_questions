@@ -2,57 +2,139 @@ Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
 
+    -Public, -Protected, -Private, -Non Modified
+
 2) Briefly explain each acm and how they differentiate from each other?
+
+    -Public : Accessible for everyone.
+    -Protected : Accesible for same package and the classes inherited from protected member`s class in different packages.
+    -Private : Accesible only for same class.
+    -Non Modified : Accessible only for the same package`s elements.
 
 3) Why do we use acm's?
 
+    -We use acm`s to control data access and hide the code behind program that user doesn`t need to involve in.
+
 4) What is the risk of not using acm's?
+
+    -Datas that we must hide can be easily changed from outside and this will break the program.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
 
+    - carMethod(Car car){}
+
 6) Write a method signature that returns an object of type "Car".
+
+    - Car carMehod(Car car){
+        return new Car();
+    }
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
 method to another?
 
+    - When passing object to another method we must avoid from nullpointer exceptions. Also we must pay attention to relationship between the object
+    referred by reference and objects used in method. In some situations compiler can not recognize the compatibility between objects and
+    result of the program will be shown in runtime. To avoid incompatibility we must cast the objects. Upcasting and downcasting depends on the objects
+    relationships.
+
 8) What is method overloading?
+
+    - Method overloading means writing/using methods in the same name.
 
 9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
 
+    - Method overloading provides programmer to write methods in the same name as much as possible. C language doesn`t support method overloading
+    so programmer have to generate different names for each methods with same feature. If number of methods increased this can confuse the
+    programmer and the user.
+
 10) How do you overload a method? What signifies that a method is being overloaded?
+
+    - There is a signature defines the method. "Name of the Method", "Parameter Types and Numbers" describes the signature of method.
 
 11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
 
+    - divide (int val1, int val2){}
+    - divide (double val1, double val2){}
+    - divide (long val1, long val2){}
+
 12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+
+    - To overload a constructor we must declare constructors with different parameter.
 
 13) Why do we overload constructors?
 
+    - Overloading constructor gives user a change to assign any information user wants when creating an object.
+
 14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
+
+    class Sample{
+    int val1;
+    int val2;
+    int val3;
+
+    Sample (int val1){this.val1 = val1;}
+    Sample (int val1, int val2){this.val1 = val1; this.val2 = val2;}
+    Sample (int val1, int val2, int val3){this.val1 = val1; this.val2 = val2; this.val3 = val3;}
+    }
 
 15) What is recursion?
 
+    - Recursion is a technique that method calls itself.
+
 16) What important considerations must you keep in mind when using recursion?
+
+    - To put escape part in the beginning of the method to prevent stackoverflow exception
 
 17) How do you make a method recursive?
 
+    - Simply call the method`s itself at the end of the method.
+
 18) How do you escape a recursive method?
+
+    - To put a validation statement beginning of the method depends on method`s purpose.
 
 19) Explain what "static" is all about?
 
+    - Static variables or methods belongs to class and they aren`t created differently for every object they are created only for once.
+
 20) When should you use "static"?
+
+    - If programmer doesn`t need to access a non-static variables or methods and if a method or variable must not be unique for every
+    object then it should use as static.
 
 21) What differentiates static variables from instance variables?
 
+    - Instance variables are unique informations for each object has been created. They take place in memory. Static variables doesn`t take
+    place in memory and they are not unique for each objects. Instance variables can be reached by only references (for ex ref.variable())
+    static variables can be reached by class name (for ex ClassName.variable()) they can be reached by references either but this is not a
+    true technique for programming.
+
 22) What is a the quicksort? Briefly describe how the quicksort works.
+
+    - Quicksort algorithm divides the array and finds the area for searches the element in divided part. This divide and search process
+    goes on until the element founded.
 
 23) What is a nested, or inner, class?
 
+    - Inner class is class that declared inside the class.
+
 24) What is the scope of a nested class?
+
+    - Nested classes are used for higher data protection.
 
 25) What is a variable-arity method?
 
+    - Variable - arity method is a method that capable of accepting more than one variable in one parameter.
+
 26) What makes a variable-arity method unique? When should you use it?
+
+    - It provides method to take more than one variable at choice by this technique programmer doesn`t need to write
+    lots of parameters when writing method. It takes whole variables in an array.
 
 27) What is the shorthand name for variable-arity?
 
+    - method(int ... numbers) Usage of variable-arity is with ... operator.
+
 28) Why important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
+
+    - Like any other method declaration programmer must pay attention to method overloading and ambiguity between methods.
