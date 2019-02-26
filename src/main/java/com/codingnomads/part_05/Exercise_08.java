@@ -30,12 +30,12 @@ class Outer{
 
     public void add(int number1, int number2){
         inner = new Inner();
-        sum = inner.add(this,number1, number2);
+        sum = inner.add(number1, number2);
     }
 
     public void multiply(int number1, int number2){
         inner = new Inner();
-        sum = inner.multiply(this,number1, number2);
+        sum = inner.multiply(number1, number2);
     }
 
     public int getNumber1() {
@@ -51,19 +51,19 @@ class Outer{
     }
 
     class Inner{
-        public int add(Outer outer,int number1, int number2){
-            setOuterClassNumbers(outer, number1,number2);
+        public int add(int number1, int number2){
+            setOuterClassNumbers(number1,number2);
             return number1 + number2;
         }
 
-        public int multiply(Outer outer, int number1, int number2){
-            setOuterClassNumbers(outer,number1,number2);
+        public int multiply(int number1, int number2){
+            setOuterClassNumbers(number1,number2);
             return number1 * number2;
         }
 
-        private void setOuterClassNumbers(Outer outer, int number1, int number2){
-            outer.number1 = number1;
-            outer.number2 = number2;
+        private void setOuterClassNumbers(int val1, int val2){
+            number1 = val1;
+            number2 = val2;
         }
 
     }
