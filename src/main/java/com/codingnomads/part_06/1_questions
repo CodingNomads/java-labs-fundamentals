@@ -1,22 +1,43 @@
 1) What is Java inheritance?
 
+One of the three foundational aspects of OOP. Inheritance allows you to define traits common to a set of related items.
+
 2) How does inheritance work?
+
+inheritance allows subclasses to incorporate another class into its declaration.
 
 3) What are some advantages that inheritance provides?
 
+We do not need to specify every aspect of every class each time we create a class. We can write classes that contain commonalities and then branch off to subclasses that extend on the parent classes definition
+
 4) What does the "super" keyword do?
+
+calls the constructor in the parent class, or
+accesses a member of the superclass (method or instance variable)
 
 5) In what order are constructors called when there are multiple subclasses?
 
+Parent class (Level 0), sub class (level 1), sub class (level 2) etc...
+
 6) What does it mean when a method is overridden?
+
+When a method in a subclass with same return type and method signature as the method in the parent class is invoked by a call to that method (instead of the parent classes method).
 
 7) How do overridden methods support polymorphism?
 
+JVM will, at run-time, determine which method (superclass or subclass) to be invoked based on the object reference that is passed to it.
+
 8) What is the difference between an overloaded method and an overridden method?
+
+overloaded method is when we create methods with same name but with differing signatures. overriden method is when we invoke the subclass method of same signature and return type as our parent method, instead of invoking the parent method.
 
 9) What is dynamic method dispatch?
 
 10) What does the "final" keyword do?
 
+prevents method overriding. Prevents inheritance
+
 11) Are classes in Java are a subclass of what super class?
+
+classes are all subclasses of the Object class.
 
