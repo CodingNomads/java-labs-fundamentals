@@ -7,3 +7,20 @@ package com.codingnomads.part_05;
  * out "Hello Recursion!" 10 times.
  *
  */
+
+class Exercise_05 {
+    public static void main(String[] args) {
+
+        printThisManyTimes(10);
+
+    }
+
+    static void printThisManyTimes(int iterations) {
+
+        if (iterations > 0) {
+            System.out.println("Hello Recursion!");
+            printThisManyTimes(iterations - 1);
+        }
+
+    }
+}

@@ -7,3 +7,74 @@ package com.codingnomads.part_05;
  * modify the instance variables of Class_02 once again. Use System.out.println at various points to demonstrate the
  * flow of execution and the varying state of each private variable. You can name these classes whatever you want.
  */
+
+class Exercise_02 {
+    public static void main(String[] args) {
+
+        Food nasiGoreng = new Food();
+
+        foodReviewer(nasiGoreng);
+
+
+
+    }
+
+    public static void foodReviewer(Food dish) {
+
+        System.out.println("I am the regular one..");
+
+        dish.setCost(100);
+        dish.setVegan(false);
+        dish.setYummy(true);
+
+        System.out.println(dish.toString());
+
+        pickyFoodReviewer(dish);
+
+
+
+    }
+
+    public static void pickyFoodReviewer(Food dish) {
+
+        System.out.println("I am the picky one...");
+
+        dish.setCost(123);
+        dish.setVegan(true);
+        dish.setYummy(false);
+
+        System.out.println(dish.toString());
+
+
+    }
+
+
+}
+
+class Food {
+
+    private boolean isYummy;
+    private double cost;
+    private boolean isVegan;
+
+    public void setYummy(boolean yummy) {
+        isYummy = yummy;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    public void setVegan(boolean vegan) {
+        isVegan = vegan;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "isYummy=" + isYummy +
+                ", cost=" + cost +
+                ", isVegan=" + isVegan +
+                '}';
+    }
+}

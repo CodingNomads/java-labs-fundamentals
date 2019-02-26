@@ -7,66 +7,77 @@ package com.codingnomads.part_05;
  * variable and the static variable for each class.
  */
 
-class BaseballTeams {
+class Exercise_07 {
+    public static void main(String[] args) {
 
-    private String league;
-    private char division;
-    static int numOfPlayers;
+        City.setPlanet("Jupiter");
 
-    public String getLeague() {
-        return league;
-    }
+        City denpansar = new City();
+        denpansar.setName("Denpansar");
+        denpansar.setMedianIncome(9854);
+        denpansar.setPopulation(1000000);
 
-    public void setLeague(String league) {
-        this.league = league;
-    }
+        City toronto = new City();
+        toronto.setName("Toronto");
+        toronto.setMedianIncome(56000);
+        toronto.setPopulation(2900000);
 
-    public char getDivision() {
-        return division;
-    }
+        City barcelona = new City();
+        barcelona.setName("Barcelona");
+        barcelona.setMedianIncome(59000);
+        barcelona.setPopulation(5000000);
 
-    public void setDivision(char division) {
-        this.division = division;
-    }
+        System.out.println(denpansar.toString());
+        System.out.println();
+        System.out.println(toronto.toString());
+        System.out.println();
+        System.out.println(barcelona.toString());
 
-    public static int getNumOfPlayers() {
-        return numOfPlayers;
-    }
-
-    public static void setNumOfPlayers(int numOfPlayers) {
-        BaseballTeams.numOfPlayers = numOfPlayers;
     }
 }
 
+class City {
 
-class TeamConstructor {
+    private static String planet = "Earth";
+    private double medianIncome;
+    private String name;
+    private int population;
 
-    public static void main(String[] args) {
-
-        BaseballTeams blueJays = new BaseballTeams();
-        BaseballTeams indians = new BaseballTeams();
-        BaseballTeams reds = new BaseballTeams();
-        BaseballTeams rockies = new BaseballTeams();
-
-
-        blueJays.setDivision('E');
-        blueJays.setLeague("AL");
-
-        indians.setLeague("AL");
-        indians.setDivision('C');
-
-        reds.setLeague("NL");
-        reds.setDivision('C');
-
-        rockies.setLeague("NL");
-        rockies.setDivision('W');
-
-        BaseballTeams.numOfPlayers=32;
-
-        System.out.println("The Blue Jays have " + " " + BaseballTeams.numOfPlayers + " " + "players");
-        System.out.println("The Blue Jays are in the" + " " + blueJays.getLeague());
-
-
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(int population) {
+        this.population = population;
+    }
+
+    public double getMedianIncome() {
+        return medianIncome;
+    }
+
+    public void setMedianIncome(double medianIncome) {
+        this.medianIncome = medianIncome;
+    }
+
+    public static void setPlanet(String planet) {
+        City.planet = planet;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "medianIncome=" + medianIncome +
+                ", name='" + name + '\'' +
+                ", population=" + population +
+                ", planet=" + planet +
+                '}';
+    }
 }
