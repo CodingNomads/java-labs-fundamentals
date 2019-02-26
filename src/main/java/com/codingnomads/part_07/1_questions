@@ -1,19 +1,42 @@
 1) What is a Java package?
 
+packages are collection of classes.
+Related pieces of a program can be grouped together
+Classes within a package can be made private, i.e. only classes from within the package can use them. (further enhancing encapsulation)
+packages partition the namespace. Large programs might have name collisions. We have a new namespace for each package.
+
 2) What is the CLASSPATH variable all about?
+
+Classpath allows us to set the path to the package if it not stored in a sub-directory of the current working directory
 
 3) What does the package structure mirror?
 
+Directory structure
+
 4 How do packages affect access to Java classes?
+
+classes in a package can only be utilised if the package has been imported.
 
 5) What is an interface?
 
+A list of methods that must be implemented by another class. I.e what must be done, but not how to do it.
+
 6) What makes interfaces unique?
+
+They do not contain any implmentation of the methods contained within them.
 
 7) What keyword is used to specify that a class is going to use a separate interface?
 
+interface
+
 8) What makes interfaces so useful?
+
+multiple implmentations of the same method. Polymorphism.
 
 9) What was added in JDK 8 that makes interfaces even more useful?
 
+The ability to add default implementation behaviour
+
 10) How many interfaces can a single class implement?
+
+as many as desired
