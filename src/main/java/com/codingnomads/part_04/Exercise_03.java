@@ -1,4 +1,5 @@
 package com.codingnomads.part_04;
+import java.util.Arrays;
 
 /**
 
@@ -16,5 +17,21 @@ public class Exercise_03 {
 
     public static void main(String[] strings) {
 
+        int[][] multiArray = new int[5][10];
+        int counter = 0;
+
+        for (int i = 0; i < multiArray.length; i++) {
+            for (int j = 0; j < multiArray[i].length;j++) {
+                multiArray[i][j] = counter++;
+                }
+            }
+        for (int[] a : multiArray) {
+            for (int i : a) {
+                System.out.print(i + "\t");
+            }
+            System.out.print("\n");
+        }
+
+        }
+
     }
-}
