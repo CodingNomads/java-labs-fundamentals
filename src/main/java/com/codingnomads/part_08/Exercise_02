@@ -1,2 +1,6 @@
 
 Complete question 10 in the self-test for chapter 9.
+
+In question 3 of the Chapter 6 Self Test, you created a Stack class.
+Add custom exceptions to your class that report stack full and stack empty conditions.
+
