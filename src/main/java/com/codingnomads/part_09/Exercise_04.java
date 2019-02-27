@@ -10,6 +10,12 @@ package com.codingnomads.part_09;
 
 public class Exercise_04 {
 
+    public static void main(String[] args) {
+
+        
+
+    }
+
 
 }
 

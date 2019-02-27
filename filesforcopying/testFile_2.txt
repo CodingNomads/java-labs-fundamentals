@@ -1,0 +1,1 @@
+This is text file for try-with-resources exercise for ex.1.

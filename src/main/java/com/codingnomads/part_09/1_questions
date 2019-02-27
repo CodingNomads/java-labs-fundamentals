@@ -1,39 +1,77 @@
 
 1) What is the difference between a byte stream and a character stream?
-
+A byte stream is when you want to read/write data byte by byte (8 bits at a time.)
+A character stream is when you want to read/write data character by character (16 bits a a time).
 
 2) List at least 3 examples of byte stream classes?
-
+FileInputStream
+FilterInputStream
+ByteArrayInputStream
 
 3) List at least 3 examples of character stream classes?
-
+BufferedWriter
+FilterWriter
+CharArrayReader
 
 4) What is try-with-resources? Why is it super cool?
-
+Try-with-resources allows us to declare resources to be used in a try block and ensures that the resources will be closed after the execution of the block.
+It replaces the try-catch-finally block and makes the code much shorter.
 
 5) Demonstrate a try-wth-resources block:
-
+try(Scanner scanner = new Scanner(new File("test.txt"))){
+    while(scanner.hasNext()){
+        System.out.println(scanner.nextLine());
+        }
+} catch (FileNotFoundException fnfe){
+    fnfe.printStackTrace();
+}
 
 6) What does the read() method on the FileInputStream class return?
-
+integers
 
 7) What is the documentation above of the FileInputStream class header say? (hint: inside /** ... */)
-
+/**
+     * Creates a <code>FileInputStream</code> by
+     * opening a connection to an actual file,
+     * the file named by the path name <code>name</code>
+     * in the file system.  A new <code>FileDescriptor</code>
+     * object is created to represent this file
+     * connection.
+     * <p>
+     * First, if there is a security
+     * manager, its <code>checkRead</code> method
+     * is called with the <code>name</code> argument
+     * as its argument.
+     * <p>
+     * If the named file does not exist, is a directory rather than a regular
+     * file, or for some other reason cannot be opened for reading then a
+     * <code>FileNotFoundException</code> is thrown.
+     *
+     * @param      name   the system-dependent file name.
+     * @exception  FileNotFoundException  if the file does not exist,
+     *                   is a directory rather than a regular file,
+     *                   or for some other reason cannot be opened for
+     *                   reading.
+     * @exception  SecurityException      if a security manager exists and its
+     *               <code>checkRead</code> method denies read access
+     *               to the file.
+     * @see        java.lang.SecurityManager#checkRead(java.lang.String)
+     */
 
 8) Is a DataOutputStream used for bytes or characters?
-
+bytes
 
 9) What is a BufferedReader?
-
+Buffered input character stream
 
 10) Why does a BufferedReader require an InputStreamReader as an argument?
 
 
-11) What does the InputStreamReader dp with it's byte stream argument?
+11) What does the InputStreamReader do with it's byte stream argument?
 
 
 12) What is the difference between the read() and readLine() on BufferedReader?
-
+read() reads the file as interger; readLine() reads the file as strings.
 
 13) Demonstrate instantiating a BufferedReader that will read a file called "yucatan_cenotes.txt"
-
+BufferedReader br = new BufferedReader(new FileReader("yucatan_cenotes.txt"));
