@@ -20,7 +20,7 @@ public class Exercise_02 {
 
             do {
                 i = bufferedInputStream.read();
-                if (i != -1) System.out.print(i + "\t");
+                if (i != -1) System.out.println(i + "\t");
             } while (i != 1);
         } catch (IOException exc) {
             System.out.println("IO Exception");
