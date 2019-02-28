@@ -2,57 +2,168 @@ Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
 
+Default
+private
+public
+protected
+
 2) Briefly explain each acm and how they differentiate from each other?
+
+Default - visible to the package. i.e. no modifier
+Private - visible only to the class in which they are defined
+Public - visible to all classes. If public class is in another package it still needs to be imported
+Protected - variables, methods and constructors declared protected in a superclass can be accessed only subclasses in another package or any class in the package
 
 3) Why do we use acm's?
 
+To control which classes, variables, methods are visible (i.e.) can be changed by different areas of our code
+
 4) What is the risk of not using acm's?
+
+Following from above. We risk changing variables, invoking methods that cause errors from misuse.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
 
+<access modifier> <return type> method(Object car) {
+    // method code
+    }
+
 6) Write a method signature that returns an object of type "Car".
+
+<access modifier> void method(Object car) {
+    // method code
+    return car;
+    }
+
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
 method to another?
 
+We are passing a reference to the value(s) of the object
+
 8) What is method overloading?
+
+Allowing a class to have more than one method of the same name but with different signatures.
 
 9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
 
+We don't have to create and remember different names for methods that do the same thing.
+
 10) How do you overload a method? What signifies that a method is being overloaded?
+
+Different number of input parameters, different data type of parameters, different sequence of data type of parameters.
+not different return types, not static vs non-static
 
 11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
 
+<access modifier> <return type> method (int a, int b) {
+    //method code
+    }
+
+<access modifier> <return type> method (double x, double y) {
+    //method code
+    }
+
+
 12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+
+Differing parameters for each constructor
 
 13) Why do we overload constructors?
 
+We may only need to specify certain instance variables of the object at initialisation. Other instance variables can be left null etc.
+
 14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
+
+Constructor(int a, int b, String c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+    }
+
+Constructor (int a, int b) {
+    this.a = a;
+    this.b = b;
+    }
+
+Constructor (int a) {
+    this.a = a;
+    }
 
 15) What is recursion?
 
+a function calling itself
+
 16) What important considerations must you keep in mind when using recursion?
+
+Provide a base case, otherwise recursion will repeat infinitely
+Your function may never converge on a value and will therefore repeat infinitely
+your function may call itself an excessive number of times and therefore take large memory requirements (out of memory exception)
 
 17) How do you make a method recursive?
 
+Provide a "base case" - the function returns a value without any subsequent calls
+Provide a "reduction step" - the function calls itself with an input which "steps" closer to the base case
+
 18) How do you escape a recursive method?
+
+Incase in a forloop with counter to force a certain number of steps
+reduction step "steps" closer to the base case, when base case is reached the function stops calling itself
 
 19) Explain what "static" is all about?
 
+Static indicates that a particular static member belongs to the class itself, rather than to an instance
+
 20) When should you use "static"?
+
+When creating multiple objects of the same class that all share some variable.
 
 21) What differentiates static variables from instance variables?
 
+static variables belong to the class. Instance variables belong to the instance.
+
 22) What is a the quicksort? Briefly describe how the quicksort works.
+
+Divide and Conquer algorithim.
+Select element from array (pivot) Usually the middle. All elements smaller go to another array, All elements greater go to a second array. Values equal can go to either.
+recursively apply algorithm to each array to create sub arrays.
+Continue until each array has one element.
+combine arrays
 
 23) What is a nested, or inner, class?
 
+A class defined within the scope of another class
+
 24) What is the scope of a nested class?
+
+nested classes are members of outer classes. Non-static nested classes have access to members of enclosing class (even if private)
+static nested classes do not have access to members of the enclosing class.
 
 25) What is a variable-arity method?
 
+A method that can have variable number of argument calls.
+
 26) What makes a variable-arity method unique? When should you use it?
+
+When you are unsure of how many arguments you will need to pass to your method
 
 27) What is the shorthand name for variable-arity?
 
+vargs
+
 28) Why important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
+
+When overloading methods with vargs, method invocation can lead to ambiguity which will cause code not to compile.
+
+class Demo {
+
+    static void test(int n... vargs) {
+        // method body
+        }
+
+        static void test(int n, int ... vargs) {
+        // method body
+        }
+}
+
+a call to test will fail. you may be calling one vargs argument or one with int n and empty vargs.

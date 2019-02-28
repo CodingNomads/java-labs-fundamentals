@@ -43,12 +43,14 @@ class TeamConstructor {
 
     public static void main(String[] args) {
 
+        // Creating instances of Baseball Teams.
+
         BaseballTeams blueJays = new BaseballTeams();
         BaseballTeams indians = new BaseballTeams();
         BaseballTeams reds = new BaseballTeams();
         BaseballTeams rockies = new BaseballTeams();
 
-
+        // Using setter methods to set division and league for Baseball teams (objects) created earlier)
         blueJays.setDivision('E');
         blueJays.setLeague("AL");
 
@@ -61,9 +63,9 @@ class TeamConstructor {
         rockies.setLeague("NL");
         rockies.setDivision('W');
 
-        BaseballTeams.numOfPlayers=32;
+        BaseballTeams.numOfPlayers=32; // Setting the static instance variable
 
-        System.out.println("The Blue Jays have " + " " + BaseballTeams.numOfPlayers + " " + "players");
+        System.out.println("The Blue Jays have" + " " + BaseballTeams.numOfPlayers + " " + "players");
         System.out.println("The Blue Jays are in the" + " " + blueJays.getLeague());
 
 
