@@ -15,7 +15,30 @@ package com.codingnomads.part_11;
 
 public class Exercise_01<T> {
 
+    public void printArray(T[] input) {
+        for (T element : input) {
+            System.out.println(element);
+        }
+    }
+
 }
+
+class ControllerForThis {
+    public static void main(String[] args) {
+        Integer[] arr1 = {1,2,3};
+        String[] arr2 = {"Hello","World"};
+
+        Exercise_01<Integer> printerOfInts = new Exercise_01<>();
+        printerOfInts.printArray(arr1);
+
+        Exercise_01<String> printerOfStrings = new Exercise_01<>();
+        printerOfStrings.printArray(arr2);
+    }
+}
+
+
+
+
 
 
 

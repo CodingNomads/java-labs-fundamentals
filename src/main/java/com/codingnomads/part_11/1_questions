@@ -1,12 +1,19 @@
 1) Turn the following into a Generic interface:
 
-   public interface Consumer {
-       public void consume(String parameter)
+   public interface Consumer<T> {
+       public void consume(T parameter)
    }
 
 2) What are a few advantages of using Generic types?
 
+- Ability to use polymorphism at its fullest
+- Lower overhead for user
+- Simplify code
+
 3) What is Type Erasure?
+
+It is the action the compiler takes when a generic type is detected and its subsequent replacement for an Object or
+other class type.
 
 4) Assuming the following snippet:
 
@@ -18,10 +25,23 @@
     Integer i = returnType(1);
     String s = returnType("String");
 
+    Yes it does
+
 5) What is a Bounded Type Parameter?
+
+Is when we use a generic which extends (or is "bounded") by a particular class
 
 6) Demonstrate the use of Generic Wildcard in a method signature:
 
+public static <T> T sayItInSpanish(T object) {
+    return object;
+}
+
 7) What are bounded and unbounded wildcards in Generics?
 
+One is bounded by an upper class and the other one is not
+
 8) What is difference between List<? extends T>  and  List <? super T> ?
+
+When you extend you have the ability to cast to an object to read but not to write whereas, super gives you the ability
+to write but with no guarantees of reading back the object
