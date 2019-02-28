@@ -10,6 +10,5 @@ public class Exercise_03 {
     public static void main(String[] args) {
         Queue<Integer> queue = new PriorityQueue<>();
 
-        queue.
     }
 }
