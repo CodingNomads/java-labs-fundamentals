@@ -15,6 +15,24 @@ package com.codingnomads.part_11;
 
 public class Exercise_01<T> {
 
+    // Generic method to accept generic array type input array
+    static <T> void printArray (T[] inputArray) {
+        for (T element : inputArray) { // for each loop to cycle through array elements and print
+            System.out.println(element);
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+
+        Integer[] intArray = {1,2,3}; // creating arrays
+        String[] stringArray = {"Hello","World"};
+
+        printArray(intArray); // passing arrays to method.
+        printArray(stringArray);
+
+    }
 }
 
 
