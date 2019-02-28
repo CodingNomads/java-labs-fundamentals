@@ -1,30 +1,43 @@
 
 1) What is the difference between the Thread and Runnable?
 
+Thread is a class
+Runnable is an interface
 
 2) How do you start a thread using Runnable?
 
+your class needs to implement the runnables interface.
+Override the run() method to start the thread
 
 3) How do you start a thread using Thread?
 
+Your class needs to extend the thread class.
+call to super the thread constructor + invoke start() method.
 
 4) How do you get a thread's name?
 
+invoke getName() method
 
 5) What does the "synchronize()" method do?
 
+Limits the objects within a code block to having on thread operate on the object at a time.
 
 6) What doe the "join()" method do?
 
+will put the current thread on wait until the thread on which it is called is dead.
 
 7) What does the "sleep()" method do?
 
+pause the execution of a thread by a specified time in milliseconds
 
 8) What is the one method you must write if you're implementing the Runnable class?
 
+run()
 
 9) Should you create that same method if you're extending Thread?
 
+yes
 
 10) Why is multi-threading so cool?
 
+we can execute multiple tasks during idle time of other threads to increase the speed at which our program runs.
