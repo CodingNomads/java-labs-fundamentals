@@ -1,18 +1,17 @@
 package com.codingnomads.part_11;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.NoSuchElementException;
+
 
 /**
  * Modify your Queue Class so that it is completely generic
  */
-class QueueClass {
+class QueueClass<T> {
 
     // Private Instance variables
     private int maxSize;
-    private int[] queArray;
-    private int currentPos;
+    private Object[] queArray;
     private int numOfItems;
     private int front;
     private int rear;
@@ -20,7 +19,7 @@ class QueueClass {
     // Method to create queue array
     public void createQueue(int s) {
         maxSize = s;
-        queArray = new int[maxSize];
+        queArray = new Object[maxSize];
         numOfItems = 0;
         front = 0;
         rear = -1;
@@ -31,56 +30,81 @@ class QueueClass {
         return "QueueClass{" +
                 "maxSize=" + maxSize +
                 ", queArray=" + Arrays.toString(queArray) +
-                ", currentPos=" + currentPos +
                 ", numOfItems=" + numOfItems +
                 ", front=" + front +
                 ", rear=" + rear +
                 '}';
     }
 
-    public void add(int a) {
-        // Checking if queue is full
-        if (numOfItems == maxSize) {
-            System.out.println("Queue full; extending");
-            int[] temp = new int[maxSize + 1];
-            temp = queArray;
-            return;
+    public void add(T element) {
+        if (arrayIsFull()) {
+            incrementArraySize();
         }
-        queArray[++rear] = a;
+        queArray[++rear] = element;
         numOfItems++; // increase counter of number of items by one
     }
 
-    public void offer(){
-
+    private void incrementArraySize() {
+        System.out.println("Queue full; extending");
+        Object[] temp = new Object[maxSize * 2];
+        queArray = temp;
     }
 
+    private boolean arrayIsFull() {
+        return numOfItems == maxSize;
+    }
+
+//    public void offer() {
+//
+//    }
 
 
-    public void remove(){
-        queArray[rear] = 0;
-        rear--;
+    public void remove() {
+        queArray[front] = 0;
+        front++;
+        Object[] temp1 = new Object[queArray.length - 1];
+        for (int i = front; i < queArray.length; i++) {
+            temp1[i - 1] = queArray[i];
+        }
+        queArray = temp1;
+        front--;
         numOfItems--;
 
     }
 
-    public void poll() {
-
+    public int poll() {
+        T element = (T) queArray[front];
+        front++;
+//        Object[] temp1 = new Object[queArray.length - 1];
+//        for (int i = front; i < queArray.length; i++) {
+//            temp1[i - 1] = queArray[i];
+//        }
+//        queArray = temp1;
+        front--;
+        numOfItems--;
+        return a;
     }
 
-    public void element(){
-
+    public int element() {
+        try {
+            return queArray[front];
+        } catch (NoSuchElementException exc) {
+            System.out.println("Queue is empty");
+        }
+        return queArray[front];
     }
 
-    public void peek() {
 
+    public int peek() {
+        return queArray[front];
     }
 
-
-
+    public int size() {
+        return numOfItems;
+    }
 
 
     public static void main(String[] args) {
-
         QueueClass queue = new QueueClass();
         queue.createQueue(5);
         queue.add(10);
@@ -95,6 +119,13 @@ class QueueClass {
         queue.remove();
 
         System.out.println(queue.toString());
+
+        System.out.println("Queue size is: " + queue.size());
+        System.out.println("Front of queue is: " + queue.peek());
+        System.out.println("Element method returns: " + queue.element());
+        System.out.println("Poll method returns: " + queue.poll());
+
+        System.out.println("Queue composition after poll method: " + queue.toString());
 
     }
 }
