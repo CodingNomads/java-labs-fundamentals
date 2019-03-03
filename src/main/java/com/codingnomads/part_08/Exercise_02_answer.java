@@ -1,4 +1,5 @@
 package com.codingnomads.part_08;
+
 import java.util.Stack;
 import java.util.Arrays;
 
@@ -24,35 +25,34 @@ public class Exercise_02_answer {
         numberStack.setCapacity(capacity);
         numberStack.setSize(size);
 
-        for(int i = 0; i <= size; i++){
-            try{
-                System.out.println(numberStack);
-                if(size == 0)
-                    throw new EmptyStackException("Stack is empty!");
-            } catch (EmptyStackException ex){
-                System.out.println(ex.toString());
-            } catch(ArrayIndexOutOfBoundsException e){
-                System.out.println("Array out of bounds!");
-            }
-        }
 
+        try {
+            for (int i = 0; i <= size; i++) {
+                System.out.println(numberStack);
+                if (size == 0)
+                    throw new EmptyStackException("Stack is empty!");
+            }
+        } catch (EmptyStackException ex) {
+            System.out.println(ex.toString());
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array out of bounds!");
+        }
 
 
         System.out.println(numberStack);
 
-
-        for(int i = 1; i < 11; i++){
-            try{
+        //todo this doesn't work...
+        try {
+            for (int i = 0; i < 11; i++) {
                 numberStack.push(i);
-                System.out.println(size);
-                if(i > capacity)
+                if (i > capacity)
                     throw new FullStackException("stack is full.");
-            } catch (FullStackException e){
-                System.out.println(e.toString());
             }
-
+        } catch (FullStackException e) {
+            System.out.println(e.toString());
+            } catch (ArrayIndexOutOfBoundsException err){
+                System.out.println("Array about of bounds.");
         }
-
 
         System.out.println(numberStack);
     }
@@ -60,9 +60,9 @@ public class Exercise_02_answer {
 }
 
 
-class EmptyStackException extends Exception{
+class EmptyStackException extends Exception {
 
-    public EmptyStackException(String message){
+    public EmptyStackException(String message) {
         super(message);
     }
 
@@ -72,59 +72,59 @@ class EmptyStackException extends Exception{
     }
 }
 
-class FullStackException extends Exception{
+class FullStackException extends Exception {
 
-    public FullStackException(String message){
+    public FullStackException(String message) {
         super(message);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "MyStack is full";
     }
 
 }
 
-class MyStack{
+class MyStack {
 
-        private int capacity;
-        private int[] myStack = new int[capacity];
-        private int size = 0;
+    private int capacity;
+    private int[] myStack = new int[capacity];
+    private int size = 0;
 
-        //define size method when created
-        public void setSize(int num){
-            num = size;
+    //define size method when created
+    public void setSize(int num) {
+        this.size = num;
+    }
+
+    //define capacity
+    public void setCapacity(int num) {
+        this.capacity = num;
+    }
+
+    //push method
+    public void push(int input) {
+        myStack[size] = input;
+        size++;
+    }
+
+    //pop method
+    public void pop() {
+        size--;
+    }
+
+
+    //show Stack
+    public void show() {
+        for (int i = 0; i < size; i++) {
+            System.out.println(myStack[i]);
         }
-
-        //define capacity
-        public void setCapacity(int num){
-            num = capacity;
-        }
-
-        //push method
-        public void push(int input){
-            myStack[size] = input;
-            size ++;
-        }
-
-        //pop method
-        public void pop(){
-            size --;
-        }
-
-
-
-        //show Stack
-        public void show(){
-            for(int i = 0; i < size; i++){
-                System.out.println(myStack[i]);
-            }
-        }
+    }
 
     @Override
     public String toString() {
         return "MyStack{" +
-                "myStack=" + Arrays.toString(myStack) +
+                "capacity=" + capacity +
+                ", myStack=" + Arrays.toString(myStack) +
                 ", size=" + size +
                 '}';
     }
