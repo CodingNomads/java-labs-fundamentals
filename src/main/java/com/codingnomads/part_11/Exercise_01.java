@@ -15,6 +15,21 @@ package com.codingnomads.part_11;
 
 public class Exercise_01<T> {
 
+    public static <T> void printArray(T[]... inputArray) {
+        for (int i = 0; i < inputArray.length; i++) {
+            for (int j = 0; j < inputArray[i].length; j++) {
+                System.out.println(inputArray[i][j]);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Integer[] intArray = {1, 2, 3};
+        String[] stringArray = {"Hello", "World"};
+
+        printArray(intArray, stringArray);
+
+    }
 }
 
 
