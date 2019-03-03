@@ -14,7 +14,7 @@ public class ShapesController {
         square.calcArea(2);
         square.calcPerimeter(2);
         System.out.println(square.toString());
-        
+
         //todo perimeter and area aren't showing anything??
         Circles circle = new Circles(6);
         circle.setHasColor(false);
