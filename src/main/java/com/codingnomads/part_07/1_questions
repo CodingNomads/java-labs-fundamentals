@@ -1,19 +1,29 @@
 1) What is a Java package?
+A package is a group of related classes, interfaces, enumerations and annotations.
+Packages can offer a way of organizing related classes together.
 
 2) What is the CLASSPATH variable all about?
+Classpath is parameter in the JVM that specifies the location of user-defined classes and packages.
 
 3) What does the package structure mirror?
+A hierarchy
 
 4 How do packages affect access to Java classes?
 
 5) What is an interface?
+Interface contain only method signatures and fields.
 
 6) What makes interfaces unique?
 
+
 7) What keyword is used to specify that a class is going to use a separate interface?
+implement
 
 8) What makes interfaces so useful?
 
+
 9) What was added in JDK 8 that makes interfaces even more useful?
 
+
 10) How many interfaces can a single class implement?
+more than one
