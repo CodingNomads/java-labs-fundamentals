@@ -1,12 +1,16 @@
 1) Turn the following into a Generic interface:
 
-   public interface Consumer {
-       public void consume(String parameter)
+   public interface Consumer<T> {
+       public void consumer(T parameter)
    }
 
 2) What are a few advantages of using Generic types?
 
+We can parameterise classes, interfaces, methods to accept multiple data types therefore avoiding code duplication for operations that are logically identical across different data types.
+
 3) What is Type Erasure?
+
+Type erasure ensures compatibility with java code pre-generics. At compile time all generic type information is removed and replaced with the types specified by the code. Appropriate casts are also made.
 
 4) Assuming the following snippet:
 
@@ -18,10 +22,26 @@
     Integer i = returnType(1);
     String s = returnType("String");
 
-5) What is a Bounded Type Parameter?
+    Yes.
+
+5) What is a Bounded Type Parameter?            System.out.print(sum);
+
+When type parameters are bounded by the superclass they extend. E.g. if <T extends Number> then we can only pass sub-class of Number
+
 
 6) Demonstrate the use of Generic Wildcard in a method signature:
 
+<return type> methodName(<?> obj) {
+// code
+}
+
 7) What are bounded and unbounded wildcards in Generics?
 
+Bounded = restricted type parameters that can be passed to a method
+Unbound = no restrictions.
+
 8) What is difference between List<? extends T>  and  List <? super T> ?
+
+<? super T> - Contravariance - We can write to but not read out of a data structure
+<? extends e> = Covariance - We can read items out of a data structure but not write them into the data structure. This is because of type erasure, the JVM can't be sure that when we are writing into a data structure that the types are compatible
+

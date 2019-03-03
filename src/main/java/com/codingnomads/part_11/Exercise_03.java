@@ -72,7 +72,7 @@ class QueueClass<T> {
 
     }
 
-    public int poll() {
+    public T poll() {
         T element = (T) queArray[front];
         front++;
 //        Object[] temp1 = new Object[queArray.length - 1];
@@ -82,21 +82,21 @@ class QueueClass<T> {
 //        queArray = temp1;
         front--;
         numOfItems--;
-        return a;
+        return element;
     }
 
-    public int element() {
+    public T element() {
         try {
-            return queArray[front];
+            return (T) queArray[front];
         } catch (NoSuchElementException exc) {
             System.out.println("Queue is empty");
         }
-        return queArray[front];
+        return (T) queArray[front];
     }
 
 
-    public int peek() {
-        return queArray[front];
+    public T peek() {
+        return (T) queArray[front];
     }
 
     public int size() {
