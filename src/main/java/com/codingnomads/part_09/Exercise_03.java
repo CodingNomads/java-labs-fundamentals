@@ -16,6 +16,7 @@ public class Exercise_03 {
 
         try(BufferedReader br = new BufferedReader(new FileReader("filesforcopying/test_03.txt")))
         {
+            //todo why does this ommit the first character??
             while ((i = br.read()) != -1) {
                 while ((s = br.readLine()) != null) {
                     System.out.println(s);
