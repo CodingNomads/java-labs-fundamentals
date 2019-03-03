@@ -25,15 +25,14 @@ public class Exercise_01{
         }
 
         System.out.println();
-        System.out.println(intArray[1]);
-        System.out.println(intArray[3]);
-        System.out.println(intArray[7]);
-        System.out.println(intArray[9]);
-        System.out.println(intArray[8]);
-        System.out.println(intArray[6]);
-        System.out.println(intArray[4]);
-        System.out.println(intArray[2]);
-        System.out.println(intArray[0]);
+
+        for(int i = 1; i < intArray.length; i = i + 2){
+            System.out.println(intArray[i]);
+        }
+
+        for(int i = 8; i >= 0; i = i - 2){
+            System.out.println(intArray[i]);
+        }
 
 
     }
