@@ -13,8 +13,25 @@ package com.codingnomads.part_11;
  * World
  */
 
-public class Exercise_01<T> {
+public class Exercise_01 {
+    public static void main(String[] args) {
 
+        Integer [] intArray = {1,2,3};
+        printArray(intArray);
+
+        String [] stringArray = {"Hello", "World"};
+        printArray(stringArray);
+
+    }
+
+    public static <T> void printArray(T[] array){
+
+        for (Object object : array) {
+            System.out.print(object + " ");
+        }
+
+        System.out.println();
+    }
 }
 
 
