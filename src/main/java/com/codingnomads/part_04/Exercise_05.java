@@ -13,6 +13,14 @@ package com.codingnomads.part_04;
 public class Exercise_05 {
 
     public static void main(String[] strings) {
+        int[] exampleArray = new int[6];
 
+        for(int i = 0; i < exampleArray.length; i++){
+            exampleArray[i] = i;
+        }
+
+        for(int num : exampleArray){
+            System.out.println(exampleArray[num]);
+        }
     }
 }
