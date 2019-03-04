@@ -7,3 +7,21 @@ package com.codingnomads.part_05;
  * out "Hello Recursion!" 10 times.
  *
  */
+
+class Recursion{
+
+    public static void main(String[] args) {
+        recursion(10);
+    }
+
+    public static void recursion(int x){
+
+        if(x == 0) return;
+
+        recursion(x -1);
+        System.out.println("Hello Recursion!" + x);
+
+    }
+
+
+}

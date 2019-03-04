@@ -1,58 +1,120 @@
 Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
+Acm determine access at the class level and the member level
 
 2) Briefly explain each acm and how they differentiate from each other?
+public - everyone can access
+private - only members of the same class can access
+protected - only members of the same package, or in a subclass (can be in a different package)
+default - only members of the same package
 
 3) Why do we use acm's?
+encapsulation: to prevent direct access to certain variables if necessary; and control how variables are manipulated for different classes.
 
 4) What is the risk of not using acm's?
+Variables that shouldn't be accessed/changed are accessed/changed.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
+For example:
+public void methodName(Car car){
+}
 
 6) Write a method signature that returns an object of type "Car".
+class Car {
+
+    Car getObject(){
+        Cube obj = new Cube();
+        return obj;
+    }
+}
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
 method to another?
+Objects are instances of a class. When you create an object, you are only creating a copy/reference of the class.
+
 
 8) What is method overloading?
+Method overloading allows for a method to be used in different ways, ex. with different parameter types, or with a different number of parameters.
 
 9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
+For example, it would be useful if you want to pass in parameters of different data types into the method.
 
 10) How do you overload a method? What signifies that a method is being overloaded?
+You create a different version of the same method. A method is overloaded if you see differences in the parameters that are passed into the method.
 
 11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
+addition(int, int);
+addition(int, int, int);
+addition(int, int, int, int);
 
 12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+You create the same constructor but with different parameters.
 
 13) Why do we overload constructors?
+So that we can use different parameters for the same class.
 
 14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
+class QuestionFourteen{
+
+int x;
+int y;
+
+QuestionFourteen(){
+};
+
+QuestionFourteen(){
+    x = 10;
+
+}
+
+QuestionFourteen(int x, y){
+    this.x = x;
+    this.y = y;
+}
 
 15) What is recursion?
+Recursion is when a method makes a call to itself.
 
 16) What important considerations must you keep in mind when using recursion?
+When writing a recursive method, you must have a conditional statement so that the method will return.
 
 17) How do you make a method recursive?
+Write a method that calls for itself
 
 18) How do you escape a recursive method?
+when the stopping condition is met
 
 19) Explain what "static" is all about?
+Static is a keyword that can be applied to nested classes, methods, variables, and blocks.
+
 
 20) When should you use "static"?
+Static is used when you want to define a class member that will be used independently of any object of that class.
 
 21) What differentiates static variables from instance variables?
+static method is called through its class name, without any objects of that class being created.
 
 22) What is a the quicksort? Briefly describe how the quicksort works.
+Quicksort is a sorting algorithm, which is leveraging the divide-and-conquer principle. It has an average O(n log n) complexity.
+
 
 23) What is a nested, or inner, class?
+A nested class is a class that exist inside another class.
 
 24) What is the scope of a nested class?
+A nested class does not exist independently of its enclosing class.
+Therefore, the scope of a nested class is bounded by its outer class. A nested class that is directly declared within its enclosing class scope is a member of its enclosing class.
 
 25) What is a variable-arity method?
+- variable-length arguments
+This kind of method may take in a variable number of arguments
 
 26) What makes a variable-arity method unique? When should you use it?
+You could take in multiple arguments as parameters.
 
 27) What is the shorthand name for variable-arity?
+varargs
 
 28) Why important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
+If you have varargs overloading, and you call the method. The program will not know which varargs method you want to call.

@@ -7,66 +7,56 @@ package com.codingnomads.part_05;
  * variable and the static variable for each class.
  */
 
-class BaseballTeams {
+class Shirt {
+    public static void main(String[] args) {
+        Clothes shirts = new Clothes();
+        shirts.setColor("blue");
+        shirts.setTotalNum(2);
+        System.out.println(shirts);
 
-    private String league;
-    private char division;
-    static int numOfPlayers;
+        Clothes dresses = new Clothes();
+        dresses.setColor("red");
+        dresses.setTotalNum(1);
+        System.out.println(dresses);
 
-    public String getLeague() {
-        return league;
+        Clothes jackets = new Clothes();
+        jackets.setColor("black");
+        jackets.setTotalNum(1);
+        System.out.println(jackets);
+
+        Clothes.isHasSleeves();
+        Clothes.setHasSleeves(false);
     }
 
-    public void setLeague(String league) {
-        this.league = league;
-    }
-
-    public char getDivision() {
-        return division;
-    }
-
-    public void setDivision(char division) {
-        this.division = division;
-    }
-
-    public static int getNumOfPlayers() {
-        return numOfPlayers;
-    }
-
-    public static void setNumOfPlayers(int numOfPlayers) {
-        BaseballTeams.numOfPlayers = numOfPlayers;
-    }
 }
 
+class Clothes{
 
-class TeamConstructor {
+    private int totalNum;
+    private static boolean hasSleeves;
+    private String color;
 
-    public static void main(String[] args) {
-
-        BaseballTeams blueJays = new BaseballTeams();
-        BaseballTeams indians = new BaseballTeams();
-        BaseballTeams reds = new BaseballTeams();
-        BaseballTeams rockies = new BaseballTeams();
-
-
-        blueJays.setDivision('E');
-        blueJays.setLeague("AL");
-
-        indians.setLeague("AL");
-        indians.setDivision('C');
-
-        reds.setLeague("NL");
-        reds.setDivision('C');
-
-        rockies.setLeague("NL");
-        rockies.setDivision('W');
-
-        BaseballTeams.numOfPlayers=32;
-
-        System.out.println("The Blue Jays have " + " " + BaseballTeams.numOfPlayers + " " + "players");
-        System.out.println("The Blue Jays are in the" + " " + blueJays.getLeague());
-
-
+    public void setTotalNum(int totalNum) {
+        this.totalNum = totalNum;
     }
 
+    public static boolean isHasSleeves() {
+        return hasSleeves;
+    }
+
+    public static void setHasSleeves(boolean hasSleeves) {
+        Clothes.hasSleeves = hasSleeves;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Clothes{" +
+                "totalNum=" + totalNum +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
