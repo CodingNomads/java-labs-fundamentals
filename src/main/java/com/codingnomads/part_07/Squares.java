@@ -9,24 +9,26 @@ public class Squares extends Rectangles{
     }
 
     @Override
-    public double calcPerimeter(double length){
-        this.length = length;
-        return super.perimeter = length * 2;
+    public double calcPerimeter(){
+        double perimeter = length * 2;
+        super.setPerimeter(perimeter);
+        return perimeter;
     }
 
     @Override
-    public double calcArea(double length) {
-        this.length = length;
-        return super.area = length * length;
+    public double calcArea() {
+        double area = length * length;
+        super.setArea(area);
+        return area;
     }
 
     @Override
     public String toString() {
         return "Squares{" +
                 "length=" + length +
-                ", perimeter=" + perimeter +
-                ", area=" + area +
-                ", hasColor=" + hasColor +
+                ", perimeter=" + super.getPerimeter() +
+                ", area=" + super.getArea() +
+                ", hasColor=" + super.isHasColor() +
                 '}';
     }
 }

@@ -1,5 +1,7 @@
 package com.codingnomads.part_07;
 
+import java.util.List;
+
 public class Rectangles extends Shapes {
 
     private double width;
@@ -12,19 +14,19 @@ public class Rectangles extends Shapes {
         this.length = length;
     }
 
-    //todo should I make these methods public??
-    //todo and do I need to use the keyword this here?
-    double calcPerimeter(double width, double length){
-        this.width = width;
-        this.length = length;
-        return super.perimeter = (width + length) * 2;
+    @Override
+    public double calcPerimeter(){
+        double perimeter = (this.length + this.width) * 2;
+        super.setPerimeter(perimeter);
+        return perimeter;
     }
 
 
-    double calcArea(double width, double length) {
-        this.width = width;
-        this.length = length;
-        return super.area = width * length;
+    @Override
+    public double calcArea() {
+        double area = this.width * this.length;
+        super.setArea(area);
+        return area;
     }
 
 
@@ -33,9 +35,9 @@ public class Rectangles extends Shapes {
         return "Rectangles{" +
                 "width=" + width +
                 ", length=" + length +
-                ", perimeter=" + perimeter +
-                ", area=" + area +
-                ", hasColor=" + hasColor +
+                ", perimeter=" + super.getPerimeter() +
+                ", area=" + super.getArea() +
+                ", hasColor=" + super.isHasColor() +
                 '}';
     }
 }

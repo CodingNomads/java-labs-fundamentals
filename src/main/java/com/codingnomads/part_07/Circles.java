@@ -12,25 +12,25 @@ public class Circles extends Shapes {
         this.radius = radius;
     }
 
-    @Override
-    public double calcArea(double radius){
-        this.radius = radius;
+    public double calcArea(){
+        super.setArea(radius * radius * Math.PI);
         return radius * radius * Math.PI;
     }
 
     @Override
-    public double calcPerimeter(double radius){
-        this.radius = radius;
-        return 2 * radius * Math.PI;
+    public double calcPerimeter(){
+        double perimeter = 2 * radius * Math.PI;
+        super.setPerimeter(perimeter);
+        return perimeter;
     }
 
     @Override
     public String toString() {
         return "Circles{" +
                 "radius=" + radius +
-                ", perimeter=" + perimeter +
-                ", area=" + area +
-                ", hasColor=" + hasColor +
+                ", perimeter=" + super.getPerimeter() +
+                ", area=" + super.getArea() +
+                ", hasColor=" + super.isHasColor() +
                 '}';
     }
 }

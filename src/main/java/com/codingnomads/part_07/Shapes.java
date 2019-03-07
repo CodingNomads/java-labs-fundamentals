@@ -2,10 +2,9 @@ package com.codingnomads.part_07;
 
 public class Shapes implements ShapesCalculator{
 
-    //todo what is the purpose of having private variables?
-    double perimeter;
-    double area;
-    boolean hasColor;
+    private double perimeter;
+    private double area;
+    private boolean hasColor;
 
     public boolean isHasColor() {
         return hasColor;
@@ -15,11 +14,29 @@ public class Shapes implements ShapesCalculator{
         this.hasColor = hasColor;
     }
 
-    public double calcArea(double area){
+    public double calcArea()
+    {
         return this.area;
     }
 
-    public double calcPerimeter(double perimeter){
+    public double calcPerimeter()
+    {
         return this.perimeter;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
+    }
+
+    public void setPerimeter(double perimeter) {
+        this.perimeter = perimeter;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
     }
 }
